@@ -45,7 +45,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{#2 \vspace{-2pt}}
   }
 }
 
@@ -76,6 +76,7 @@
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
 
+
 \begin{document}
 
 %----------HEADING-----------------
@@ -86,69 +87,86 @@
 \end{tabular*}
 
 
+\section{Professional Summary}
+\resumeSubHeadingListStart
+  \resumeSubItem{}{AI research lead focused on predictive maintenance from sensor time-series, with 5+ years building ML pipelines and deep learning models for anomaly detection in condition monitoring applications.}
+  \resumeSubItem{}{Experienced in Python + PyTorch and data workflows at scale (30k+ windows/day), translating model outputs into diagnostic tools used by maintenance teams.}
+\resumeSubHeadingListEnd
+\vspace{-7pt}
 
 %----------Work Experience-----------------
 
 \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
-    {PhD Candidate - AI Research Lead (VALE partnership)}{January 2022 - Present}
+    {AI Research Lead (PhD Candidate) -- VALE partnership}{January 2022 - Present}
     \resumeItemListStart
 
-        \resumeItem{Technical Leadership}
-          {Served as the technical lead for VALE's predictive maintenance program using IRVs, defining research priorities, translating stakeholder needs into ML research topics, and coordinating technical execution across a 15-person team (undergraduate, Master's, and PhD).}
+        \resumeItem{ML Pipeline: }
+          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready windows for sensor-fault and track-defect detection (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
 
-        \resumeItem{Data Engineering / ML Pipeline}
-          {Built an end-to-end ML workflow (ETL, feature engineering, training, evaluation, reporting) for track defect detection, processing 30k+ multi-sensor time windows/day in a daily batch pipeline; maintained code in Git and reviewed results with maintenance engineers.}
+        \resumeItem{Sensor Defect Detection: }
+          {Developed deep learning models and batch checks to detect sensor faults and data-quality anomalies, achieving 91\% precision on internally labeled events and reducing data-issue detection latency from 3 months (manual review) to 1 day; tuned and compared model variants via Optuna studies.}
 
-        \resumeItem{Time-Series Anomaly Detection / Data Quality}
-          {Developed deep learning models and batch checks to detect sensor faults and data-quality anomalies, achieving 91\% precision on internally labeled events and reducing data-issue detection latency from 3 months (manual review) to 1 day.}
+        \resumeItem{Track Defect Detection: }
+          {Built transformer-based reconstruction models and a repeatability metric that converts residuals into calibrated anomaly probabilities to score repeatable, location-level defect candidates with sparse ground truth.}
 
-        \resumeItem{Fault Localization / Diagnostics}
+        \resumeItem{Model Diagnostics (Weak Labels): }
           {Built a diagnostic workflow using weak labels (data-quality score) and latent-space analysis to interpret anomaly clusters, linking them to specific sensors/channels and response signatures to support maintenance investigation.}
 
-        \resumeItem{Sequence Modeling (Transformers)}
-          {Built transformer-based reconstruction models and a repeatability metric that maps residuals to calibrated anomaly probabilities to produce location-level defect likelihood scores with minimal ground truth; used Optuna study tracking to tune and compare model variants.}
-
-        \resumeItem{Applied Data Analysis (Maintenance Limits)}
-          {Supported EFVM maintenance engineering by redefining dynamic response-based maintenance limits and procedures; communicated results in regular reviews with maintenance engineers and stakeholders at multiple management levels, with recommendations adopted for field use.}
-
+        \resumeItem{Technical Leadership: }
+          {Served as the technical lead for VALE's predictive maintenance program using IRVs, defining research priorities, translating stakeholder needs into ML research topics, and coordinating technical execution across a 15-person team (undergraduate, Master's, and PhD).}
 
       \resumeItemListEnd
 \vspace{2pt}
     \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
-    {Master's Researcher (VALE partnership)}{June 2020 - January 2022}
-		\resumeItemListStart
+    {AI Researcher (M.Sc. program) -- VALE partnership}{June 2020 - January 2022}
+        \resumeItemListStart
 
-        \resumeItem{Technical Leadership}
-          {Acted as the technical lead for the AI research group, mentoring 5 junior researchers and coordinating ML experiments and data analysis on IRV datasets across multidisciplinary teams from two universities.}
-
-        \resumeItem{Supervised Learning (Regression)}
+        \resumeItem{Supervised Learning (Regression): }
           {Developed deep learning models to estimate vertical track geometry from IRV data, achieving 98\% $R^{2}$.}
 
-        \resumeItem{Optimization (Genetic Algorithms)}
+        \resumeItem{Optimization (Genetic Algorithms): }
           {Developed a wheel--rail profile optimization methodology using IRV data and genetic algorithms; field-tested a wear-optimized profile, reducing wear by 20\% while maintaining fatigue performance and improving the L/V ratio by $\sim$35\%.}
 
-        \resumeItem{Data Analysis / Decision Support}
+        \resumeItem{Data Analysis / Decision Support: }
           {Analyzed wheel reprofiling limits and recommended changing the EFVM threshold from 3 mm to 2 mm based on the wheel-profile optimization study, increasing projected wheel life by at least 29\% (current profile) and 50\% (proposed); recommendation adopted.}
 
-		\resumeItemListEnd
+        \resumeItem{Technical Leadership: }
+          {Acted as the technical lead for the AI research group, mentoring 5 junior researchers and coordinating ML experiments and data analysis on IRV datasets across multidisciplinary teams from two universities.}
+
+        \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+\vspace{-7pt}
 
-
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Model Deployment Demo: Time-Series Anomaly Inference Service}{\href{https://github.com/pirao/<REPO>}{GitHub}}
+    {FastAPI + Docker (personal project)}{2025}
+    \resumeItemListStart
+      \resumeItem{Serving API: }
+        {Implemented a FastAPI service for time-series anomaly inference with input validation, model versioning, and JSON responses.}
+      \resumeItem{Deployment: }
+        {Containerized the service with Docker and documented local + container runs (docker build/run or docker compose) with example requests.}
+      \resumeItem{Results + Reproducibility: }
+        {Included an anonymized sample dataset and a reproducible evaluation script/notebook; reported baseline metrics and example outputs in the README.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-5pt}
 
 \section{Skills Summary}
-	\resumeSubHeadingListStart
-		\resumeSubItem{Languages}{~~~~~~Python, SQL, MATLAB}
-		\resumeSubItem{Frameworks}{~~~~PyTorch, scikit-learn, Optuna, pandas, NumPy, SciPy}
-		\resumeSubItem{Tools}{~~~~~~~~~~~~~~Git, Docker, PostgreSQL, MySQL, SQLite}
-    \resumeSubItem{Cloud}{~~~~~~~~~~~~~Microsoft Azure}
-    \resumeSubItem{OS}{~~~~~~~~~~~~~~~~~~Linux, Windows}
-	\resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubItem{Programming}{~Python, SQL, MATLAB}
+    \resumeSubItem{Frameworks}{~~~~PyTorch, PyTorch Lightning, scikit-learn, Optuna, pandas, NumPy, SciPy}
+    \resumeSubItem{Tools}{~~~~~~~~~~~~~~Git, PostgreSQL, MySQL, SQLite}
+    \resumeSubItem{ML Domains}{~~Time-series modeling, anomaly detection, predictive maintenance}
+    \resumeSubItem{Languages}{~~~~~~Portuguese (Native), English (Fluent)}
+  \resumeSubHeadingListEnd
 
 
-\vspace{-5pt}
+\vspace{-7pt}
 
 %-----------EDUCATION-----------------
 \section{~~Education}
@@ -164,15 +182,9 @@
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
       {Bachelor's Degree in Mechanical Engineering}{May 2020}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Machine-learning-based prediction of wheel–rail L/V ratio to assess margin to Nadal’s derailment criterion}}}      
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Machine-learning-based prediction of wheel--rail L/V ratio to assess margin to Nadal’s derailment criterion}}}
     \resumeSubHeadingListEnd
-	    
+
 \vspace{-5pt}
-
-\begin{comment}
-    
-
-
-\end{comment}
 
 \end{document}

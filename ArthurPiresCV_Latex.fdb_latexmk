@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1766439246.69246 "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_Latex.tex" "ArthurPiresCV_Latex.pdf" "ArthurPiresCV_Latex" 1766439247.94477 0
-  "ArthurPiresCV_Latex.aux" 1766439247 493 85ada7d43edac2ff6ea59355825fc3df "pdflatex"
-  "ArthurPiresCV_Latex.out" 1766439247 341 16db1a714ebfc119b3881768c5234630 "pdflatex"
-  "ArthurPiresCV_Latex.tex" 1766439245 7604 e6ec189caecbdbe6f2fec8455dd31d11 ""
+["pdflatex"] 1766443098.93423 "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_Latex.tex" "ArthurPiresCV_Latex.pdf" "ArthurPiresCV_Latex" 1766443100.52068 0
+  "ArthurPiresCV_Latex.aux" 1766443100 715 9773f0bb02b5693b3c78055b5ee9fd1c "pdflatex"
+  "ArthurPiresCV_Latex.out" 1766443100 570 0adb1e4e4ea90907ac9c47cbfbc79c64 "pdflatex"
+  "ArthurPiresCV_Latex.tex" 1766443096 8677 fac206f62270d18ecde0e2984d3ec2a7 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1766430497 82747 ba5fb1eabee6d83d92a256603f2ca5a9 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1766430502 10472 02ed0bcd06cd54cae1c919a65e688c70 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1766430505 11548 ea0bb7c48f1c2f2c294aa32c9680ba6c ""
@@ -83,7 +83,7 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1761901070 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_Latex.tex" 1766439245 7604 e6ec189caecbdbe6f2fec8455dd31d11 ""
+  "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_Latex.tex" 1766443096 8677 fac206f62270d18ecde0e2984d3ec2a7 ""
   (generated)
   "ArthurPiresCV_Latex.aux"
   "ArthurPiresCV_Latex.log"
