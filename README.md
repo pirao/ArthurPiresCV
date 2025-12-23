@@ -1,11 +1,8 @@
 # Arthur Cancellieri Pires — Resume
 
 This repository hosts the public, always-up-to-date version of my professional resume.
-
-👉 **View resume (PDF):**  
+ 
 [![Resume](https://img.shields.io/badge/View-Resume-blue)](https://pirao.github.io/ArthurPiresCV/)
-
-
 ---
 
 ### Profile
