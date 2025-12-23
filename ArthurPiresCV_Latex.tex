@@ -89,8 +89,8 @@
 
 \section{Professional Summary}
 \resumeSubHeadingListStart
-  \resumeSubItem{}{AI research lead focused on predictive maintenance from sensor time-series, with 5+ years building ML pipelines and deep learning models for anomaly detection in condition monitoring applications.}
-  \resumeSubItem{}{Experienced in Python + PyTorch and data workflows at scale (30k+ windows/day), translating model outputs into diagnostic tools used by maintenance teams.}
+  \resumeSubItem{}{AI research lead with 5+ years applying machine learning to sensor time-series data, primarily from instrumented railway vehicles (IRVs), for predictive maintenance and condition monitoring with a focus on anomaly detection under sparse ground truth and proxy labels (data-quality score).}
+  \resumeSubItem{}{Built scalable data workflows (30k+ windows/day) and deep learning models (including autoencoder-based anomaly detection), translating model outputs into diagnostic tools used in engineering reviews.}
 \resumeSubHeadingListEnd
 \vspace{-5pt}
 
@@ -98,7 +98,7 @@
 
 \section{Work Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
+    \resumeSubheading{Laboratório Ferroviário - Unicamp (Lafer)}{On-site}
     {AI Research Lead (PhD Candidate) -- VALE partnership}{January 2022 - Present}
     \resumeItemListStart
 
@@ -106,26 +106,26 @@
           {Developed deep learning models and batch checks to detect sensor faults and data-quality anomalies, achieving 91\% precision on internally labeled events and reducing data-issue detection latency from 3 months (manual review) to 1 day; tuned and compared model variants via Optuna studies.}
 
         \resumeItem{Track Defect Detection: }
-          {Built transformer-based reconstruction models and a repeatability metric that converts residuals into calibrated anomaly probabilities to score repeatable, location-level defect candidates with sparse ground truth.}
+          {Built transformer-based autoencoders for anomaly detection and a repeatability metric that converts reconstruction errors into calibrated anomaly probabilities to score repeatable, location-level defect candidates under sparse ground truth.}
 
-        \resumeItem{Model Diagnostics (Weak Labels): }
-          {Built a diagnostic workflow using weak labels (data-quality score) and latent-space analysis to interpret anomaly clusters, linking them to specific sensors/channels and response signatures to support maintenance investigation.}
+        \resumeItem{Model Diagnostics (Proxy Labels): }
+          {Built a diagnostic workflow using proxy labels (data-quality score) and latent-space analysis to interpret anomaly clusters, linking them to specific sensors/channels and response signatures to support maintenance investigation.}
 
         \resumeItem{Technical Leadership: }
-          {Served as the technical lead for VALE's predictive maintenance program using IRVs, translating stakeholder needs into ML research deliverables, and coordinating technical execution across a 10-person team (undergraduate, Master's, and PhD).}
+        {Served as the technical lead for VALE's IRV-based predictive maintenance program, translating stakeholder needs into ML deliverables and coordinating technical execution across a 10-person team (undergraduate, Master's, and PhD).}
 
       \resumeItemListEnd
 \vspace{2pt}
 
-    \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
+    \resumeSubheading{Laboratório Ferroviário - Unicamp (Lafer)}{On-site}
     {AI Researcher (M.Sc. program) -- VALE partnership}{June 2020 - January 2022}
         \resumeItemListStart
 
         \resumeItem{ML Pipeline: }
-          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready windows for ML (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
+          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready time-series windows for ML experiments (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
 
         \resumeItem{Supervised Learning (Regression): }
-          {Developed deep learning models to estimate vertical track geometry from IRV data, achieving 98\% $R^{2}$ on a held-out dataset.}
+          {Developed deep learning models to estimate vertical track geometry from IRV data, achieving $R^{2} \approx 0.98$ on a held-out dataset.}
 
         % \resumeItem{Stakeholder Collaboration: }
         %   {Presented results and diagnostic analyses in recurring reviews with maintenance engineers and research stakeholders; incorporated feedback into data checks and model evaluation.}
@@ -134,9 +134,12 @@
 
 \vspace{2pt}
 
-    \resumeSubheading{Laboratory of Railway Dynamics and Tribology (LabTDF)}{On-site}
+    \resumeSubheading{Laboratório de Tribologia e Dinâmica Ferroviária - UFES (LabTDF)}{On-site}
     {Undergraduate Researcher (B.Sc.) -- VALE partnership}{Jan 2019 - June 2020}
         \resumeItemListStart
+
+        \resumeItem{ML-Based Force Estimation: }
+          {Built a machine-learning pipeline to estimate the wheel--rail L/V force ratio from onboard sensor time-series, using multibody dynamics simulation to generate and validate training data, providing a cost-effective alternative to instrumented wheelsets with high predictive accuracy ($R^{2} \approx 0.97$).}
 
         \resumeItem{Optimization (Genetic Algorithms): }
           {Developed a wheel--rail profile optimization methodology using measurement data and genetic algorithms; field-tested a wear-optimized profile, reducing wear by 20\% while maintaining fatigue performance and improving the L/V ratio by $\sim$35\%.}
@@ -150,31 +153,34 @@
 
 \vspace{-7pt}
 
-\section{Projects}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Model Deployment Demo: Time-Series Anomaly Inference Service}{\href{https://github.com/pirao/<REPO>}{GitHub}}
-    {FastAPI + Docker (personal project)}{2025}
-    \resumeItemListStart
-      \resumeItem{Serving API: }
-        {Implemented a FastAPI service for time-series anomaly inference with input validation, model versioning, and JSON responses.}
-      \resumeItem{Deployment: }
-        {Containerized the service with Docker and documented local + container runs (docker build/run or docker compose) with example requests.}
-      \resumeItem{Results + Reproducibility: }
-        {Included an anonymized sample dataset and a reproducible evaluation script/notebook; reported baseline metrics and example outputs in the README.}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
+% \section{Projects}
+% \resumeSubHeadingListStart
+%   \resumeSubheading
+%     {Model Deployment Demo: Time-Series Anomaly Inference Service}{\href{https://github.com/pirao/<REPO>}{GitHub}}
+%     {FastAPI + Docker (personal project)}{2025}
+%     \resumeItemListStart
+%       \resumeItem{Serving API: }
+%         {Implemented a FastAPI service for time-series anomaly inference with input validation, model versioning, and JSON responses.}
+%       \resumeItem{Deployment: }
+%         {Containerized the service with Docker and documented local + container runs (docker build/run or docker compose) with example requests.}
+%       \resumeItem{Results + Reproducibility: }
+%         {Included an anonymized sample dataset and a reproducible evaluation script/notebook; reported baseline metrics and example outputs in the README.}
+%     \resumeItemListEnd
+% \resumeSubHeadingListEnd
 
 \vspace{-5pt}
 
 \section{Skills Summary}
   \resumeSubHeadingListStart
-    \resumeSubItem{Programming}{~Python, SQL, MATLAB}
-    \resumeSubItem{Frameworks}{~~~~PyTorch, PyTorch Lightning, scikit-learn, Optuna, pandas, NumPy, SciPy}
-    \resumeSubItem{Tools}{~~~~~~~~~~~~~~Git, PostgreSQL, MySQL, SQLite}
-    \resumeSubItem{ML Domains}{~~Time-series modeling, anomaly detection, remaining useful life estimation, feature engineering}
-    \resumeSubItem{Languages}{~~~~~~Portuguese (Native), English (Fluent)}
+    \resumeSubItem{Programming:}{~Python, SQL, MATLAB}
+    \resumeSubItem{Machine Learning:}{~PyTorch, PyTorch Lightning, scikit-learn, Optuna}
+%    \resumeSubItem{Deployment:}{~FastAPI, Docker}
+    \resumeSubItem{Data Engineering:}{~ETL, data pipelines, data quality checks, feature engineering}
+%    \resumeSubItem{Databases:}{~PostgreSQL}
+    \resumeSubItem{Domain Expertise:}{~Time-series anomaly detection and forecasting for industrial sensor data; predictive maintenance / condition monitoring}
+    \resumeSubItem{Languages:}{~Portuguese (Native), English (Fluent)}
   \resumeSubHeadingListEnd
+
 
 
 \vspace{-5pt}
@@ -185,7 +191,7 @@
     \resumeSubheading
       {State University of Campinas (UNICAMP)}{Campinas, Brazil}
       {PhD in Mechanical Engineering}{Expected February 2026}
-      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based track defect detection for railway condition monitoring using instrumented railway vehicle data}}}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Reconstruction autoencoders for anomaly detection in instrumented railway vehicle data}}}
     \resumeSubheading
       {State University of Campinas (UNICAMP)}{Campinas, Brazil}
       {Master's in Mechanical Engineering}{Jan 2022}
@@ -193,9 +199,10 @@
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
       {Bachelor's Degree in Mechanical Engineering}{May 2020}
-      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Machine-learning-based prediction of wheel--rail L/V ratio to assess margin to Nadal’s derailment criterion}}}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} ML-based prediction of wheel--rail L/V ratio using multibody simulation data}}}
     \resumeSubHeadingListEnd
 
 \vspace{-5pt}
+
 
 \end{document}
