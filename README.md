@@ -1,8 +1,9 @@
 # Arthur Cancellieri Pires — Resume
 
 This repository hosts the public, always-up-to-date version of my professional resume.
- 
+
 [![Resume](https://img.shields.io/badge/View-Resume-blue)](https://pirao.github.io/ArthurPiresCV/)
+
 ---
 
 ### Profile
@@ -15,8 +16,8 @@ Senior Data Scientist / AI Research Lead with 5+ years of experience applying ma
 - Data pipelines, model deployment, and validation  
 
 ### Links
-- **LinkedIn:** https://www.linkedin.com/in/arthur-cancellieri-pires-730963160  
-- **GitHub:** https://github.com/pirao  
+- LinkedIn: https://www.linkedin.com/in/arthur-cancellieri-pires-730963160  
+- GitHub: https://github.com/pirao  
 
 ---
 
