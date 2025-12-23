@@ -92,7 +92,7 @@
   \resumeSubItem{}{AI research lead focused on predictive maintenance from sensor time-series, with 5+ years building ML pipelines and deep learning models for anomaly detection in condition monitoring applications.}
   \resumeSubItem{}{Experienced in Python + PyTorch and data workflows at scale (30k+ windows/day), translating model outputs into diagnostic tools used by maintenance teams.}
 \resumeSubHeadingListEnd
-\vspace{-7pt}
+\vspace{-5pt}
 
 %----------Work Experience-----------------
 
@@ -101,9 +101,6 @@
     \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
     {AI Research Lead (PhD Candidate) -- VALE partnership}{January 2022 - Present}
     \resumeItemListStart
-
-        \resumeItem{ML Pipeline: }
-          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready windows for sensor-fault and track-defect detection (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
 
         \resumeItem{Sensor Defect Detection: }
           {Developed deep learning models and batch checks to detect sensor faults and data-quality anomalies, achieving 91\% precision on internally labeled events and reducing data-issue detection latency from 3 months (manual review) to 1 day; tuned and compared model variants via Optuna studies.}
@@ -115,28 +112,41 @@
           {Built a diagnostic workflow using weak labels (data-quality score) and latent-space analysis to interpret anomaly clusters, linking them to specific sensors/channels and response signatures to support maintenance investigation.}
 
         \resumeItem{Technical Leadership: }
-          {Served as the technical lead for VALE's predictive maintenance program using IRVs, defining research priorities, translating stakeholder needs into ML research topics, and coordinating technical execution across a 15-person team (undergraduate, Master's, and PhD).}
+          {Served as the technical lead for VALE's predictive maintenance program using IRVs, translating stakeholder needs into ML research deliverables, and coordinating technical execution across a 10-person team (undergraduate, Master's, and PhD).}
 
       \resumeItemListEnd
 \vspace{2pt}
+
     \resumeSubheading{Railway Laboratory (Lafer)}{On-site}
     {AI Researcher (M.Sc. program) -- VALE partnership}{June 2020 - January 2022}
         \resumeItemListStart
 
+        \resumeItem{ML Pipeline: }
+          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready windows for ML (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
+
         \resumeItem{Supervised Learning (Regression): }
-          {Developed deep learning models to estimate vertical track geometry from IRV data, achieving 98\% $R^{2}$.}
+          {Developed deep learning models to estimate vertical track geometry from IRV data, achieving 98\% $R^{2}$ on a held-out dataset.}
+
+        % \resumeItem{Stakeholder Collaboration: }
+        %   {Presented results and diagnostic analyses in recurring reviews with maintenance engineers and research stakeholders; incorporated feedback into data checks and model evaluation.}
+
+        \resumeItemListEnd
+
+\vspace{2pt}
+
+    \resumeSubheading{Laboratory of Railway Dynamics and Tribology (LabTDF)}{On-site}
+    {Undergraduate Researcher (B.Sc.) -- VALE partnership}{Jan 2019 - June 2020}
+        \resumeItemListStart
 
         \resumeItem{Optimization (Genetic Algorithms): }
-          {Developed a wheel--rail profile optimization methodology using IRV data and genetic algorithms; field-tested a wear-optimized profile, reducing wear by 20\% while maintaining fatigue performance and improving the L/V ratio by $\sim$35\%.}
+          {Developed a wheel--rail profile optimization methodology using measurement data and genetic algorithms; field-tested a wear-optimized profile, reducing wear by 20\% while maintaining fatigue performance and improving the L/V ratio by $\sim$35\%.}
 
         \resumeItem{Data Analysis / Decision Support: }
           {Analyzed wheel reprofiling limits and recommended changing the EFVM threshold from 3 mm to 2 mm based on the wheel-profile optimization study, increasing projected wheel life by at least 29\% (current profile) and 50\% (proposed); recommendation adopted.}
 
-        \resumeItem{Technical Leadership: }
-          {Acted as the technical lead for the AI research group, mentoring 5 junior researchers and coordinating ML experiments and data analysis on IRV datasets across multidisciplinary teams from two universities.}
-
         \resumeItemListEnd
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
+
 
 \vspace{-7pt}
 
@@ -154,6 +164,7 @@
         {Included an anonymized sample dataset and a reproducible evaluation script/notebook; reported baseline metrics and example outputs in the README.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
+
 \vspace{-5pt}
 
 \section{Skills Summary}
@@ -161,12 +172,12 @@
     \resumeSubItem{Programming}{~Python, SQL, MATLAB}
     \resumeSubItem{Frameworks}{~~~~PyTorch, PyTorch Lightning, scikit-learn, Optuna, pandas, NumPy, SciPy}
     \resumeSubItem{Tools}{~~~~~~~~~~~~~~Git, PostgreSQL, MySQL, SQLite}
-    \resumeSubItem{ML Domains}{~~Time-series modeling, anomaly detection, predictive maintenance}
+    \resumeSubItem{ML Domains}{~~Time-series modeling, anomaly detection, remaining useful life estimation, feature engineering}
     \resumeSubItem{Languages}{~~~~~~Portuguese (Native), English (Fluent)}
   \resumeSubHeadingListEnd
 
 
-\vspace{-7pt}
+\vspace{-5pt}
 
 %-----------EDUCATION-----------------
 \section{~~Education}
@@ -174,15 +185,15 @@
     \resumeSubheading
       {State University of Campinas (UNICAMP)}{Campinas, Brazil}
       {PhD in Mechanical Engineering}{Expected February 2026}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based track defect detection for railway condition monitoring using instrumented railway vehicle data}}}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based track defect detection for railway condition monitoring using instrumented railway vehicle data}}}
     \resumeSubheading
       {State University of Campinas (UNICAMP)}{Campinas, Brazil}
       {Master's in Mechanical Engineering}{Jan 2022}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based estimation of vertical track geometry from instrumented railway vehicle data}}}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based estimation of vertical track geometry from instrumented railway vehicle data}}}
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
       {Bachelor's Degree in Mechanical Engineering}{May 2020}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Machine-learning-based prediction of wheel--rail L/V ratio to assess margin to Nadal’s derailment criterion}}}
+      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Machine-learning-based prediction of wheel--rail L/V ratio to assess margin to Nadal’s derailment criterion}}}
     \resumeSubHeadingListEnd
 
 \vspace{-5pt}
