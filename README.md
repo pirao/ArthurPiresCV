@@ -3,8 +3,8 @@
 This repository hosts the public, always-up-to-date versions of my professional resume in both Portuguese and English.
 
 ### CV options
-- [![PT CV](https://img.shields.io/badge/View-Resume-PT-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV_PT.pdf)
-- [![EN CV](https://img.shields.io/badge/View-Resume-EN-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV.pdf)
+- [![PT CV](https://img.shields.io/badge/Resume-PT-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV_PT.pdf)
+- [![EN CV](https://img.shields.io/badge/Resume-EN-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV.pdf)
 
 ---
 
