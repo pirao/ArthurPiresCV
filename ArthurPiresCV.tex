@@ -16,6 +16,8 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -49,12 +51,6 @@
   }
 }
 
-% \newcommand{\resumeItemWithoutTitle}[1]{
-%   \item\small{
-%     {\vspace{-2pt}}
-%   }
-% }
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -81,104 +77,80 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Arthur Cancellieri Pires}} & Email: \href{mailto:arthur-pires@live.com}{arthur-pires@live.com}\\
-  \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires} & Mobile:~~~+55-27-99986-2672\\
-  \href{https://github.com/pirao}{GitHub: ~@Pirao} \\
+  \textbf{{\LARGE Arthur Cancellieri Pires}} & E-mail: \href{mailto:arthur-pires@live.com}{arthur-pires@live.com}\\
+  \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires} & Phone:~~~+55-27-99986-2672\\
+  \href{https://github.com/pirao}{GitHub: @Pirao} & \href{https://github.com/pirao/bearing_rul_mlops}{Public project: Bearing RUL ML}\\
 \end{tabular*}
 
 
 \section{Professional Summary}
 \resumeSubHeadingListStart
-  \resumeSubItem{}{AI research lead with 5+ years applying machine learning to sensor time-series data, primarily from instrumented railway vehicles (IRVs), for predictive maintenance and condition monitoring with a focus on anomaly detection under sparse ground truth and proxy labels (data-quality score).}
-  \resumeSubItem{}{Built scalable data workflows (30k+ windows/day) and deep learning models (including autoencoder-based anomaly detection), translating model outputs into diagnostic tools used in engineering reviews.}
+\resumeSubItem{}{Applied machine learning engineer with more than 7 years of experience in sensor time series for predictive maintenance and asset condition monitoring, with a focus on anomaly detection, fault diagnosis, signal processing, and modeling in low-label scenarios.}
+\resumeSubItem{}{Experience in ETL pipelines and industrial data processing, structuring analytical datasets for deep learning model training and validation, and developing diagnostic tools used by maintenance and engineering teams.}
 \resumeSubHeadingListEnd
 \vspace{-5pt}
 
 %----------Work Experience-----------------
 
-\section{Work Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading{Laboratório Ferroviário - Unicamp (Lafer)}{On-site}
-    {AI Research Lead (PhD Candidate) -- VALE partnership}{January 2022 - Present}
-    \resumeItemListStart
+\section{Professional Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading{Railway Laboratory (Lafer) -- partnership with VALE}{On-site}
+  {Technical Lead in Applied AI}{January 2022 - Present}
+  \resumeItemListStart
 
-        \resumeItem{Sensor Defect Detection: }
-          {Developed deep learning models and batch checks to detect sensor faults and data-quality anomalies, achieving 91\% precision on internally labeled events and reducing data-issue detection latency from 3 months (manual review) to 1 day; tuned and compared model variants via Optuna studies.}
+    \resumeItem{Predictive diagnosis of track defects: }
+      {Developed, using an unsupervised approach, Transformer-based autoencoders and a repeatability metric to detect and prioritize track defects in multivariate time series, validating the method on historical data with limited labels. The solution identified defects confirmed in the field, revealed cases absent from the maintenance database, and flagged issues weeks in advance of recorded interventions.}
 
-        \resumeItem{Track Defect Detection: }
-          {Built transformer-based autoencoders for anomaly detection and a repeatability metric that converts reconstruction errors into calibrated anomaly probabilities to score repeatable, location-level defect candidates under sparse ground truth.}
+    \resumeItem{Monitoring of sensor failures and data quality: }
+      {Developed deep learning models and automated checks to detect failures in the instrumentation of EFVM wagons, achieving 91\% precision on internally labeled events and reducing detection latency from 3 months to real time, enabling maintenance teams to target the component with the highest probability of failure.}
 
-        \resumeItem{Model Diagnostics (Proxy Labels): }
-          {Built a diagnostic workflow using proxy labels (data-quality score) and latent-space analysis to interpret anomaly clusters, linking them to specific sensors/channels and response signatures to support maintenance investigation.}
+    \resumeItem{Technical leadership of AI solutions: }
+      {Acted as technical lead for VALE's predictive maintenance program based on data from instrumented wagons, translating stakeholder demands into technical deliveries and coordinating a team of 12 members, including students and maintenance engineers.}
 
-        \resumeItem{Technical Leadership: }
-        {Served as the technical lead for VALE's IRV-based predictive maintenance program, translating stakeholder needs into ML deliverables and coordinating technical execution across a 10-person team (undergraduate, Master's, and PhD).}
-
-      \resumeItemListEnd
-\vspace{2pt}
-
-    \resumeSubheading{Laboratório Ferroviário - Unicamp (Lafer)}{On-site}
-    {AI Researcher (M.Sc. program) -- VALE partnership}{June 2020 - January 2022}
-        \resumeItemListStart
-
-        \resumeItem{ML Pipeline: }
-          {Designed and operated a daily pipeline to ingest raw instrumented railway vehicle (IRV) data, engineer features, and generate model-ready time-series windows for ML experiments (30k+ windows/day); maintained the codebase in Git and reviewed outputs with maintenance engineers.}
-
-        \resumeItem{Supervised Learning (Regression): }
-          {Developed deep learning models to estimate vertical track geometry from IRV data, achieving $R^{2} \approx 0.98$ on a held-out dataset.}
-
-        % \resumeItem{Stakeholder Collaboration: }
-        %   {Presented results and diagnostic analyses in recurring reviews with maintenance engineers and research stakeholders; incorporated feedback into data checks and model evaluation.}
-
-        \resumeItemListEnd
+  \resumeItemListEnd
 
 \vspace{2pt}
 
-    \resumeSubheading{Laboratório de Tribologia e Dinâmica Ferroviária - UFES (LabTDF)}{On-site}
-    {Undergraduate Researcher (B.Sc.) -- VALE partnership}{Jan 2019 - June 2020}
-        \resumeItemListStart
+\resumeSubheading{Railway Laboratory (Lafer) -- partnership with VALE}{On-site}
+{Data and Machine Learning Engineer}{June 2020 - January 2022}
+\resumeItemListStart
 
-        \resumeItem{ML-Based Force Estimation: }
-          {Built a machine-learning pipeline to estimate the wheel--rail L/V force ratio from onboard sensor time-series, using multibody dynamics simulation to generate and validate training data, providing a cost-effective alternative to instrumented wheelsets with high predictive accuracy ($R^{2} \approx 0.97$).}
+  \resumeItem{Data pipeline for predictive models: }
+    {Designed and developed a pipeline for the daily ingestion and processing of raw data collected by instrumented wagons, generating between 20,000 and 40,000 records per wagon per day for machine learning model training and validation, while also integrating external VALE data sources to build an analytical dataset for predictive maintenance.}
 
-        \resumeItem{Optimization (Genetic Algorithms): }
-          {Developed a wheel--rail profile optimization methodology using measurement data and genetic algorithms; field-tested a wear-optimized profile, reducing wear by 20\% while maintaining fatigue performance and improving the L/V ratio by $\sim$35\%.}
+  \resumeItem{Track geometry estimation between inspections: }
+    {Developed deep learning models to estimate vertical track geometry from data collected by instrumented wagons, reducing the interval between specialized track geometry measurements. The solution achieved $R^{2} \approx 0{,}98$ on the test set and supported more frequent track evaluation, reducing gaps between inspections.}
 
-        \resumeItem{Data Analysis / Decision Support: }
-          {Analyzed wheel reprofiling limits and recommended changing the EFVM threshold from 3 mm to 2 mm based on the wheel-profile optimization study, increasing projected wheel life by at least 29\% (current profile) and 50\% (proposed); recommendation adopted.}
+\resumeItemListEnd
 
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\vspace{2pt}
 
+\resumeSubheading{Tribology and Railway Dynamics Laboratory (LabTDF) -- partnership with VALE}{On-site}
+{Intern in Machine Learning and Optimization}{Jan 2019 - June 2020}
+\resumeItemListStart
 
-\vspace{-7pt}
+  \resumeItem{Predictive modeling of the L/V ratio: }
+    {Developed a machine learning pipeline to estimate the wheel--rail contact L/V force ratio from onboard sensor time series, using multibody dynamics simulation and virtual sensors positioned at the same locations as the real sensors. The solution achieved $R^{2} \approx 0{,}97$ and contributed to making VALE's predictive maintenance project with instrumented wagons viable.}
 
-% \section{Projects}
-% \resumeSubHeadingListStart
-%   \resumeSubheading
-%     {Model Deployment Demo: Time-Series Anomaly Inference Service}{\href{https://github.com/pirao/<REPO>}{GitHub}}
-%     {FastAPI + Docker (personal project)}{2025}
-%     \resumeItemListStart
-%       \resumeItem{Serving API: }
-%         {Implemented a FastAPI service for time-series anomaly inference with input validation, model versioning, and JSON responses.}
-%       \resumeItem{Deployment: }
-%         {Containerized the service with Docker and documented local + container runs (docker build/run or docker compose) with example requests.}
-%       \resumeItem{Results + Reproducibility: }
-%         {Included an anonymized sample dataset and a reproducible evaluation script/notebook; reported baseline metrics and example outputs in the README.}
-%     \resumeItemListEnd
-% \resumeSubHeadingListEnd
+  \resumeItem{Wheel--rail profile optimization for wear reduction: }
+    {Developed a wheel--rail profile optimization methodology using genetic algorithms and field data, resulting in a profile that reduced wear by 20\%, maintained fatigue performance, and improved the L/V ratio by approximately 35\%.}
+
+  \resumeItem{Operational recommendation for maintenance threshold: }
+    {Recommended revising EFVM's maintenance threshold from 3 mm to 2 mm based on the optimization results, projecting a service life increase of at least 29\% for the current profile and 50\% for the proposed profile. The recommendation was adopted by EFVM.}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-3pt}
 
 \vspace{-5pt}
 
 \section{Skills Summary}
   \resumeSubHeadingListStart
     \resumeSubItem{Programming:}{~Python, SQL, MATLAB}
-    \resumeSubItem{ML Libraries:}{~PyTorch, PyTorch Lightning, scikit-learn, Optuna}
-    \resumeSubItem{Backend (Portfolio):}{~FastAPI, Flask}
-    \resumeSubItem{Infrastructure (Portfolio):}{~Docker, PostgreSQL, Kafka}
-    \resumeSubItem{ML Ops (Portfolio):}{~Model serving, monitoring/logging, CI/CD}
-    \resumeSubItem{Domain:}{~Industrial time-series; anomaly detection; predictive maintenance}
-    \resumeSubItem{Languages:}{~Portuguese (Native), English (Fluent)}
+    \resumeSubItem{ML \& Data:}{~PyTorch, PyTorch Lightning, scikit-learn, Optuna, ETL, PostgreSQL}
+    \resumeSubItem{Domain:}{~Industrial time series; signal processing; anomaly detection; predictive maintenance; condition monitoring}
+    \resumeSubItem{Languages:}{~Portuguese (Native), English (Fluent), Italian (Basic)}
   \resumeSubHeadingListEnd
 
 
@@ -189,17 +161,14 @@
 \section{~~Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {State University of Campinas (UNICAMP)}{Campinas, Brazil}
-      {PhD in Mechanical Engineering}{Expected April 2026}
-      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Reconstruction autoencoders for anomaly detection in instrumented railway vehicle data}}}
+      {University of Campinas (UNICAMP)}{Campinas, Brazil}
+      {Ph.D. in Mechanical Engineering}{Expected: April 2026}
     \resumeSubheading
-      {State University of Campinas (UNICAMP)}{Campinas, Brazil}
-      {Master's in Mechanical Engineering}{Jan 2022}
-      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} Deep-learning-based estimation of vertical track geometry from instrumented railway vehicle data}}}
+      {University of Campinas (UNICAMP)}{Campinas, Brazil}
+      {M.Sc. in Mechanical Engineering}{Jan 2022}
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
-      {Bachelor's Degree in Mechanical Engineering}{May 2020}
-      % {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Research focus} ML-based prediction of wheel--rail L/V ratio using multibody simulation data}}}
+      {B.Sc. in Mechanical Engineering}{May 2020}
     \resumeSubHeadingListEnd
 
 \vspace{-5pt}

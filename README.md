@@ -1,19 +1,21 @@
 # Arthur Cancellieri Pires — Resume
 
-This repository hosts the public, always-up-to-date version of my professional resume.
+This repository hosts the public, always-up-to-date versions of my professional resume in both Portuguese and English.
 
-[![Resume](https://img.shields.io/badge/View-Resume-blue)](https://pirao.github.io/ArthurPiresCV/)
+### CV options
+- [![PT CV](https://img.shields.io/badge/View-Resume-PT-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV_Latex_PT.pdf)
+- [![EN CV](https://img.shields.io/badge/View-Resume-EN-blue)](https://pirao.github.io/ArthurPiresCV/ArthurPiresCV_Latex.pdf)
 
 ---
 
 ### Profile
-Senior Data Scientist / AI Research Lead with 5+ years of experience applying machine learning to time-series data, anomaly detection, and industrial sensor systems, with a strong focus on large-scale, real-world deployments.
+Machine learning engineer with 7+ years of experience in sensor time-series for predictive maintenance and asset condition monitoring. Strong track record in anomaly detection, fault diagnosis, and deep learning solutions for low-label industrial datasets, combined with data engineering and production pipeline delivery.
 
 ### Areas of Expertise
-- Time-series modeling and anomaly detection  
-- Deep learning (autoencoders, transformers, representation learning)  
-- Industrial and railway sensor data  
-- Data pipelines, model deployment, and validation  
+- Predictive maintenance and anomaly detection in industrial sensor systems
+- Time-series ML, deep learning (autoencoders, transformers), and low-label model validation
+- Data engineering: ETL pipelines, data quality, and analytics for operational machine learning
+- Industrial domain: condition monitoring, asset health diagnostics, maintenance decision support
 
 ### Links
 - LinkedIn: https://www.linkedin.com/in/arthur-cancellieri-pires-730963160  

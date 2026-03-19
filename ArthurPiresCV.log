@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.14)  19 MAR 2026 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.14)  19 MAR 2026 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_PT.tex
-(c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_PT.tex
+**c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV.tex
+(c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (C:\Users\arthu\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -202,8 +202,8 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [20pt].
 
-(ArthurPiresCV_PT.aux)
-\openout1 = `ArthurPiresCV_PT.aux'.
+(ArthurPiresCV.aux)
+\openout1 = `ArthurPiresCV.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
@@ -238,9 +238,9 @@ LaTeX Font Info:    ... okay on input line 76.
 \everyMPtoPDFconversion=\toks27
 )
 Package hyperref Info: Link coloring OFF on input line 76.
- (ArthurPiresCV_PT.out) (ArthurPiresCV_PT.out)
+ (ArthurPiresCV.out) (ArthurPiresCV.out)
 \@outlinefile=\write3
-\openout3 = `ArthurPiresCV_PT.out'.
+\openout3 = `ArthurPiresCV.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 79.
@@ -251,9 +251,13 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 79.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 104.
+(Font)              <9> on input line 105.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 104.
+(Font)              <6> on input line 105.
+
+Overfull \hbox (2.63661pt too wide) in alignment at lines 129--129
+[] []
+ []
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -262,26 +266,26 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [1
 
-{C:/Users/arthu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ArthurPiresCV_PT.aux)
+{C:/Users/arthu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (ArthurPiresCV.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-Package rerunfilecheck Info: File `ArthurPiresCV_PT.out' has not changed.
-(rerunfilecheck)             Checksum: A278859049E12BA2161998E8E8FCA5B5;620.
+Package rerunfilecheck Info: File `ArthurPiresCV.out' has not changed.
+(rerunfilecheck)             Checksum: 56771AF86EFC6BA93EA9AD9687C8AB22;527.
  ) 
 Here is how much of TeX's memory you used:
  9898 strings out of 467871
- 153105 string characters out of 5418375
- 595397 words of memory out of 5000000
+ 153045 string characters out of 5418375
+ 594382 words of memory out of 5000000
  38672 multiletter control sequences out of 15000+600000
  636637 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,547b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,499b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\arthu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/arthu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on ArthurPiresCV_PT.pdf (1 page, 148460 bytes).
+Output written on ArthurPiresCV.pdf (1 page, 141373 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
+ 357 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

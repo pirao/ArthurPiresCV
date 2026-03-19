@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1773941370.19903 "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_PT.tex" "ArthurPiresCV_PT.pdf" "ArthurPiresCV_PT" 1773941371.6858 0
-  "ArthurPiresCV_PT.aux" 1773941371 638 50ae09f7f8b3963f2005dfb970eb505a "pdflatex"
-  "ArthurPiresCV_PT.out" 1773941371 620 a278859049e12ba2161998e8e8fca5b5 "pdflatex"
-  "ArthurPiresCV_PT.tex" 1773941369 8204 55236aee9dff3131dfa36a676d2b0808 ""
+["pdflatex"] 1773941579.94283 "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV.tex" "ArthurPiresCV.pdf" "ArthurPiresCV" 1773941581.38941 0
+  "ArthurPiresCV.aux" 1773941581 618 f5ef89591601643b729fc43f65c5e6ae "pdflatex"
+  "ArthurPiresCV.out" 1773941581 527 56771af86efc6ba93ea9ad9687c8ab22 "pdflatex"
+  "ArthurPiresCV.tex" 1773941535 7942 ba69c5d931323c52f7ec25b238777803 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1766430497 82747 ba5fb1eabee6d83d92a256603f2ca5a9 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0900.pk" 1773929845 22504 1807020e7ee6f7233faf838f44298658 ""
   "C:/Users/arthu/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1773929850 25420 77123d4c88c1f4885098b77745e4c351 ""
@@ -84,10 +84,10 @@
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1761901070 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/arthu/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV_PT.tex" 1773941369 8204 55236aee9dff3131dfa36a676d2b0808 ""
+  "c:/Users/arthu/OneDrive/Interview/Resume/ArthurPiresCV.tex" 1773941535 7942 ba69c5d931323c52f7ec25b238777803 ""
   (generated)
-  "ArthurPiresCV_PT.aux"
-  "ArthurPiresCV_PT.log"
-  "ArthurPiresCV_PT.out"
-  "ArthurPiresCV_PT.pdf"
+  "ArthurPiresCV.aux"
+  "ArthurPiresCV.log"
+  "ArthurPiresCV.out"
+  "ArthurPiresCV.pdf"
   (rewritten before read)
