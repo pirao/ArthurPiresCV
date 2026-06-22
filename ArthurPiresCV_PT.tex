@@ -14,6 +14,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
@@ -40,7 +41,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-10pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
@@ -55,12 +56,29 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
+      \textsc{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+% Linha de competências por experiência (sem marcador, pequena, rótulo em negrito)
+\newcommand{\resumeSkills}[1]{\item[]\small{\textbf{Competências:}~#1}\vspace{-4pt}}
+
+% Publicação: coluna de ano + título em negrito + veículo (estilo da referência)
+\newcommand{\resumePub}[3]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}p{2.4em}@{\hspace{0.4em}}X@{}}
+    {\small\textcolor[gray]{0.4}{#1}} & {\small\textbf{#2}, #3}
+  \end{tabularx}\vspace{1pt}
+}
+
+% Conferência: coluna de ano + conferência, duração + local (à direita)
+\newcommand{\resumeConf}[4]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}p{2.4em}@{\hspace{0.4em}}X@{}r@{}}
+    {\small\textcolor[gray]{0.4}{#1}} & {\small #2, #3} & {\small\textit{#4}}
+  \end{tabularx}\vspace{1pt}
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -78,16 +96,9 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Arthur Cancellieri Pires}} & E-mail: \href{mailto:arthur-pires@live.com}{arthur-pires@live.com}\\
-  \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires} & Celular:~~~+55-27-99986-2672\\
-  \href{https://github.com/pirao}{GitHub: @Pirao} & \href{https://github.com/pirao/AnomalyDetection2026}{Projeto público: Detecção Anomalias em Máquinas + Alarme}\\
+  \textit{Cientista de Dados \textbar{} Doutorando} & \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}\\
+  \href{https://github.com/pirao}{GitHub: @Pirao} & \href{https://github.com/pirao/AnomalyDetection2026}{Projeto público: Detecção de Anomalias em Máquinas}\\
 \end{tabular*}
-
-\section{Resumo Profissional}
-\resumeSubHeadingListStart
-\resumeSubItem{}{Engenheiro de machine learning aplicado com mais de 7 anos de experiência em séries temporais de sensores para manutenção preditiva e monitoramento da condição de ativos, com foco em detecção de anomalias, diagnóstico de falhas, processamento de sinais e modelagem em cenários com poucos rótulos.}
-\resumeSubItem{}{Experiência em pipelines de ETL e processamento de dados industriais, estruturando bases analíticas para treinamento e validação de modelos de deep learning e desenvolvimento de ferramentas de diagnóstico usadas por equipes de manutenção e engenharia.}
-\resumeSubHeadingListEnd
-\vspace{-5pt}
 
 %----------Work Experience-----------------
 
@@ -107,11 +118,12 @@
       {Liderou o programa de manutenção preditiva com dados de vagões instrumentados da VALE, traduzindo demandas de stakeholders em entregas de dados e machine learning e coordenando uma equipe de 12 integrantes, entre alunos e engenheiros de manutenção.}
 
   \resumeItemListEnd
+  \resumeSkills{Python + bibliotecas (PyTorch, PyTorch Lightning, scikit-learn) $\cdot$ Deep Learning (Transformers, Autoencoders) $\cdot$ Detecção de Anomalias $\cdot$ Séries Temporais $\cdot$ Deploy (FastAPI, Docker)}
 
 \vspace{2pt}
 
 \resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-{Engenheiro de Dados e Machine Learning}{Junho 2020 - Janeiro 2022}
+{Cientista de Dados de Pesquisa}{Junho 2020 - Janeiro 2022}
 \resumeItemListStart
 
   \resumeItem{Pipeline de dados para modelos preditivos: }
@@ -121,6 +133,7 @@
     {Desenvolveu modelos de aprendizado profundo para estimar a geometria vertical da via a partir de dados de vagões instrumentados, reduzindo o intervalo entre medições especializadas. A solução alcançou $R^{2} \approx 0{,}98$ em conjunto de teste e apoiou o aumento da frequência de avaliação da via, reduzindo lacunas entre inspeções.}
 
 \resumeItemListEnd
+\resumeSkills{Python + bibliotecas (scikit-learn, PyTorch) $\cdot$ SQL, PostgreSQL $\cdot$ ETL $\cdot$ Deep Learning $\cdot$ Processamento de Sinais}
 
 \vspace{2pt}
 
@@ -138,38 +151,68 @@
     {Recomendou a revisão do limite de manutenção da EFVM de 3 mm para 2 mm com base nos resultados da otimização, com projeção de aumento de vida útil de pelo menos 29\% para o perfil atual e 50\% para o perfil proposto. A recomendação foi adotada na EFVM.}
 
 \resumeItemListEnd
+\resumeSkills{Python, MATLAB $\cdot$ Machine Learning (scikit-learn, Optuna) $\cdot$ Algoritmos Genéticos / Otimização $\cdot$ Dinâmica Multicorpos (Universal Mechanism, Simpack)}
 \resumeSubHeadingListEnd
 
 \vspace{-3pt}
 
 \vspace{-5pt}
 
-\section{Habilidades Técnicas}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Programação:}{~Python, SQL, MATLAB}
-    \resumeSubItem{ML e Dados:}{~PyTorch, PyTorch Lightning, scikit-learn, Optuna, ETL, PostgreSQL, FastAPI}
-    \resumeSubItem{Especialidades:}{~Séries temporais industriais; processamento de sinais; detecção de anomalias; manutenção preditiva; monitoramento da condição}
-    \resumeSubItem{APIs e Ferramentas:}{~FastAPI, REST APIs, Docker}
-    \resumeSubItem{Idiomas:}{~Português (Nativo), Inglês (Fluente), Italiano (Básico)}
-  \resumeSubHeadingListEnd
-
-
-
-\vspace{-5pt}
-
 %-----------EDUCATION-----------------
-\section{~~Formação Acadêmica}
+\section{Formação Acadêmica}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
-      {Doutorado em Engenharia Mecânica}{Previsão: Abril 2026}
+      {Doutorado em Engenharia Mecânica}{Previsão: Agosto 2026}
+      \resumeItemListStart
+        \resumeItem{Tese: }{Uma metodologia para detecção de defeitos de via a partir de dados de veículos ferroviários instrumentados.}
+      \resumeItemListEnd
     \resumeSubheading
       {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
       {Mestrado em Engenharia Mecânica}{Jan 2022}
+      \resumeItemListStart
+        \resumeItem{Dissertação: }{Medição de irregularidades geométricas da via a partir de dados de veículos ferroviários instrumentados usando técnicas de machine learning.}
+      \resumeItemListEnd
     \resumeSubheading
       {Universidade Federal do Espírito Santo (UFES)}{Vitória, Brasil}
       {Bacharelado em Engenharia Mecânica}{Maio 2020}
+      \resumeItemListStart
+        \resumeItem{Monografia: }{Identificação indireta das forças de contato roda--trilho de um veículo ferroviário heavy haul instrumentado usando machine learning.}
+      \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+%-----------LANGUAGES-----------------
+\section{Idiomas}
+  \resumeSubHeadingListStart
+    \item \textbf{Português}, Nativo
+    \item \textbf{Inglês}, Fluente
+    \item \textbf{Italiano}, Básico
+  \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+%-----------PUBLICATIONS-----------------
+\section{Publicações \& Conferências}
+\vspace{4pt}
+
+{\scshape Publicações}
+\vspace{3pt}
+
+\resumePub{2024}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}{Engineering Applications of Artificial Intelligence}
+\resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
+\resumePub{2022}{Nonintrusive Operator Inference for Chaotic Systems}{IEEE Transactions on Artificial Intelligence}
+\resumePub{2021}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}{Mechanical Systems and Signal Processing}
+\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
+
+\vspace{6pt}
+{\scshape Apresentações em Conferências}
+\vspace{3pt}
+
+\resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{17--21 nov.}{Colorado Springs, EUA}
+\resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{27--31 ago.}{Rio de Janeiro, Brasil}
+\resumeConf{2023}{Railway Engineering Symposium}{19--20 maio}{Campinas, Brasil}
 
 \vspace{-5pt}
 

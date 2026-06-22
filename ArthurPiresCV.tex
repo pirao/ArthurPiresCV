@@ -14,6 +14,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
@@ -40,7 +41,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-10pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
@@ -55,12 +56,29 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
+      \textsc{#3} & \textit{#4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+% Per-entry skills line (no bullet, small, bold label)
+\newcommand{\resumeSkills}[1]{\item[]\small{\textbf{Skills:}~#1}\vspace{-4pt}}
+
+% Publication entry: year column + bold title + venue (reference style)
+\newcommand{\resumePub}[3]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}p{2.4em}@{\hspace{0.4em}}X@{}}
+    {\small\textcolor[gray]{0.4}{#1}} & {\small\textbf{#2}, #3}
+  \end{tabularx}\vspace{1pt}
+}
+
+% Conference entry: year column + conference, duration + location (right)
+\newcommand{\resumeConf}[4]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}p{2.4em}@{\hspace{0.4em}}X@{}r@{}}
+    {\small\textcolor[gray]{0.4}{#1}} & {\small #2, #3} & {\small\textit{#4}}
+  \end{tabularx}\vspace{1pt}
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -78,17 +96,10 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Arthur Cancellieri Pires}} & E-mail: \href{mailto:arthur-pires@live.com}{arthur-pires@live.com}\\
-  \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires} & Phone:~~~+55-27-99986-2672\\
+  \textit{Data Scientist \textbar{} PhD Candidate} & \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}\\
   \href{https://github.com/pirao}{GitHub: @Pirao} & \href{https://github.com/pirao/AnomalyDetection2026}{Public project: Machine Anomaly Detection + Alarms}\\
 \end{tabular*}
 
-
-\section{Professional Summary}
-\resumeSubHeadingListStart
-\resumeSubItem{}{Applied machine learning engineer with more than 7 years of experience in sensor time series for predictive maintenance and asset condition monitoring, with a focus on anomaly detection, fault diagnosis, signal processing, and modeling in low-label scenarios.}
-\resumeSubItem{}{Experience in ETL pipelines and industrial data processing, structuring analytical datasets for deep learning model training and validation, and developing diagnostic tools used by maintenance and engineering teams.}
-\resumeSubHeadingListEnd
-\vspace{-5pt}
 
 %----------Work Experience-----------------
 
@@ -108,11 +119,12 @@
       {Acted as technical lead for VALE's predictive maintenance program based on data from instrumented wagons, translating stakeholder demands into technical deliveries and coordinating a team of 12 members, including students and maintenance engineers.}
 
   \resumeItemListEnd
+  \resumeSkills{Python + libraries (PyTorch, PyTorch Lightning, scikit-learn) $\cdot$ Deep Learning (Transformers, Autoencoders) $\cdot$ Anomaly Detection $\cdot$ Time Series $\cdot$ Deployment (FastAPI, Docker)}
 
 \vspace{2pt}
 
 \resumeSubheading{Railway Laboratory (Lafer) -- partnership with VALE}{On-site}
-{Data and Machine Learning Engineer}{June 2020 - January 2022}
+{Research Data Scientist}{June 2020 - January 2022}
 \resumeItemListStart
 
   \resumeItem{Data pipeline for predictive models: }
@@ -122,6 +134,7 @@
     {Developed deep learning models to estimate vertical track geometry from data collected by instrumented wagons, reducing the interval between specialized track geometry measurements. The solution achieved $R^{2} \approx 0{,}98$ on the test set and supported more frequent track evaluation, reducing gaps between inspections.}
 
 \resumeItemListEnd
+\resumeSkills{Python + libraries (scikit-learn, PyTorch) $\cdot$ SQL, PostgreSQL $\cdot$ ETL $\cdot$ Deep Learning $\cdot$ Signal Processing}
 
 \vspace{2pt}
 
@@ -139,38 +152,68 @@
     {Recommended revising EFVM's maintenance threshold from 3 mm to 2 mm based on the optimization results, projecting a service life increase of at least 29\% for the current profile and 50\% for the proposed profile. The recommendation was adopted by EFVM.}
 
 \resumeItemListEnd
+\resumeSkills{Python, MATLAB $\cdot$ Machine Learning (scikit-learn, Optuna) $\cdot$ Genetic Algorithms / Optimization $\cdot$ Multibody Dynamics (Universal Mechanism, Simpack)}
 \resumeSubHeadingListEnd
 
 \vspace{-3pt}
 
 \vspace{-5pt}
 
-\section{Skills Summary}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Programming:}{~Python, SQL, MATLAB}
-    \resumeSubItem{ML \& Data:}{~PyTorch, PyTorch Lightning, scikit-learn, Optuna, ETL, PostgreSQL, FastAPI}
-    \resumeSubItem{Domain Expertise:}{~Industrial time series; signal processing; anomaly detection; predictive maintenance; condition monitoring}
-    \resumeSubItem{APIs \& Tools:}{~FastAPI, REST APIs, Docker}
-    \resumeSubItem{Languages:}{~Portuguese (Native), English (Fluent), Italian (Basic)}
-  \resumeSubHeadingListEnd
-
-
-
-\vspace{-5pt}
-
 %-----------EDUCATION-----------------
-\section{~~Education}
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Campinas (UNICAMP)}{Campinas, Brazil}
-      {Ph.D. in Mechanical Engineering}{Expected: April 2026}
+      {Ph.D. in Mechanical Engineering}{Expected: August 2026}
+      \resumeItemListStart
+        \resumeItem{Thesis: }{A methodology for detecting track defects from instrumented railway vehicle data.}
+      \resumeItemListEnd
     \resumeSubheading
       {University of Campinas (UNICAMP)}{Campinas, Brazil}
       {M.Sc. in Mechanical Engineering}{Jan 2022}
+      \resumeItemListStart
+        \resumeItem{Thesis: }{Measuring railway track irregularities from instrumented railway vehicle data using machine learning techniques.}
+      \resumeItemListEnd
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
       {B.Sc. in Mechanical Engineering}{May 2020}
+      \resumeItemListStart
+        \resumeItem{Thesis: }{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning.}
+      \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+%-----------LANGUAGES-----------------
+\section{Languages}
+  \resumeSubHeadingListStart
+    \item \textbf{Portuguese}, Native
+    \item \textbf{English}, Fluent
+    \item \textbf{Italian}, Basic
+  \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+%-----------PUBLICATIONS-----------------
+\section{Publications \& Conferences}
+\vspace{4pt}
+
+{\scshape Publications}
+\vspace{3pt}
+
+\resumePub{2024}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}{Engineering Applications of Artificial Intelligence}
+\resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
+\resumePub{2022}{Nonintrusive Operator Inference for Chaotic Systems}{IEEE Transactions on Artificial Intelligence}
+\resumePub{2021}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}{Mechanical Systems and Signal Processing}
+\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
+
+\vspace{6pt}
+{\scshape Conference Presentations}
+\vspace{3pt}
+
+\resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{Nov. 17--21}{Colorado Springs, USA}
+\resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{Aug. 27--31}{Rio de Janeiro, Brazil}
+\resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
 
 \vspace{-5pt}
 
