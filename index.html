@@ -2,18 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Arthur Cancellieri Pires – Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Cancellieri Pires — Data Scientist | PhD Candidate</title>
 
-  <!-- LinkedIn / Open Graph preview -->
-  <meta property="og:title" content="Arthur Cancellieri Pires – Senior Data Scientist / AI Research Lead">
-  <meta property="og:description" content="AI research lead with 5+ years in time-series ML, anomaly detection, and industrial sensor data.">
+  <meta name="description" content="Applied machine learning engineer with 7+ years in sensor time-series for predictive maintenance and asset condition monitoring — anomaly detection, fault diagnosis, signal processing, and modeling in low-label scenarios.">
+
+  <!-- Open Graph (LinkedIn / Slack link previews) -->
+  <meta property="og:title" content="Arthur Cancellieri Pires — Data Scientist | PhD Candidate">
+  <meta property="og:description" content="Applied machine learning engineer with 7+ years in sensor time-series for predictive maintenance and asset condition monitoring — anomaly detection, fault diagnosis, and deep learning on low-label industrial data.">
   <meta property="og:image" content="https://pirao.github.io/ArthurPiresCV/thumbnail.png">
+  <meta property="og:url" content="https://pirao.github.io/ArthurPiresCV/">
   <meta property="og:type" content="website">
 
-  <!-- Instant redirect to the actual PDF -->
-  <meta http-equiv="refresh" content="0; url=ArthurPiresCV_Latex.pdf">
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --ink: #1c2430;
+      --muted: #5b6675;
+      --accent: #1f6feb;
+      --border: #e3e6ea;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(20, 30, 45, 0.08);
+      max-width: 600px;
+      width: 100%;
+      padding: 40px 36px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.9rem;
+      letter-spacing: 0.2px;
+    }
+    .tagline {
+      margin: 0 0 20px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+    .summary {
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+      max-width: 50ch;
+    }
+    .buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.05s ease, background 0.15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #1a5fd0; }
+    .btn-secondary { background: #eef1f5; color: var(--ink); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: #e4e8ee; }
+    .links {
+      display: flex;
+      gap: 8px 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+    .links a { color: var(--muted); text-decoration: none; }
+    .links a:hover { color: var(--accent); text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <p>Redirecting to resume…</p>
+  <main class="card">
+    <h1>Arthur Cancellieri Pires</h1>
+    <p class="tagline">Data Scientist&nbsp;|&nbsp;PhD Candidate</p>
+    <p class="summary">
+      Applied machine learning engineer with 7+ years of experience in sensor
+      time-series for predictive maintenance and asset condition monitoring —
+      anomaly detection, fault diagnosis, signal processing, and modeling in
+      low-label scenarios.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="ArthurPiresCV.pdf">View CV (English)</a>
+      <a class="btn btn-secondary" href="ArthurPiresCV_PT.pdf">Ver CV (Português)</a>
+    </div>
+
+    <nav class="links">
+      <a href="https://www.linkedin.com/in/arthur-cancellieri-pires-730963160">LinkedIn</a>
+      <a href="https://github.com/pirao">GitHub</a>
+      <a href="mailto:arthur-pires@live.com">Email</a>
+      <a href="https://github.com/pirao/AnomalyDetection2026">Public project</a>
+    </nav>
+  </main>
 </body>
 </html>
