@@ -85,7 +85,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -106,53 +106,45 @@
 \section{Professional Experience}
 \resumeSubHeadingListStart
   \resumeSubheading{Railway Laboratory (Lafer) -- partnership with VALE}{On-site}
-  {Technical Lead in Applied AI}{January 2022 - Present}
+  {Technical Lead in Applied AI}{January 2022 to Present}
   \resumeItemListStart
 
-    \resumeItem{Predictive diagnosis of track defects: }
-      {Developed, using an unsupervised approach, Transformer-based autoencoders and a repeatability metric to detect and prioritize track defects in multivariate time series, validating the method on historical data with limited labels. The solution identified defects confirmed in the field, revealed cases absent from the maintenance database, and flagged issues weeks in advance of recorded interventions.}
+    \resumeItem{}{Led a team of 12 delivering a predictive maintenance program for VALE, one of the world's largest mining and logistics companies, converting stakeholder needs into shipped ML systems.}
 
-    \resumeItem{Monitoring of sensor failures and data quality: }
-      {Developed deep learning models and automated checks to detect failures in the instrumentation of EFVM wagons, achieving 91\% precision on internally labeled events and reducing detection latency from 3 months to real time, enabling maintenance teams to target the component with the highest probability of failure.}
+    \resumeItem{}{Cut equipment failure detection latency from 3 months to real time at 91\% precision using deep learning models and automated data quality checks on multivariate sensor streams.}
 
-    \resumeItem{Technical leadership of AI solutions: }
-      {Acted as technical lead for VALE's predictive maintenance program based on data from instrumented wagons, translating stakeholder demands into technical deliveries and coordinating a team of 12 members, including students and maintenance engineers.}
+    \resumeItem{}{Flagged critical defects weeks before scheduled maintenance, including cases absent from the maintenance database, with unsupervised Transformer autoencoders on time series data.}
 
   \resumeItemListEnd
   \resumeSkills{Python + libraries (PyTorch, PyTorch Lightning, scikit-learn) $\cdot$ Deep Learning (Transformers, Autoencoders) $\cdot$ Anomaly Detection $\cdot$ Time Series $\cdot$ Deployment (FastAPI, Docker)}
 
-\vspace{2pt}
+\vspace{-2pt}
 
 \resumeSubheading{Railway Laboratory (Lafer) -- partnership with VALE}{On-site}
-{Research Data Scientist}{June 2020 - January 2022}
+{Research Data Scientist}{June 2020 to January 2022}
 \resumeItemListStart
 
-  \resumeItem{Data pipeline for predictive models: }
-    {Designed and developed a pipeline for the daily ingestion and processing of raw data collected by instrumented wagons, generating between 20,000 and 40,000 records per wagon per day for machine learning model training and validation, while also integrating external VALE data sources to build an analytical dataset for predictive maintenance.}
+  \resumeItem{}{Built a daily ETL pipeline processing 20,000 to 40,000 sensor records per asset per day, integrating multiple external sources into one analytical dataset that powered all downstream models.}
 
-  \resumeItem{Track geometry estimation between inspections: }
-    {Developed deep learning models to estimate vertical track geometry from data collected by instrumented wagons, reducing the interval between specialized track geometry measurements. The solution achieved $R^{2} \approx 0{,}98$ on the test set and supported more frequent track evaluation, reducing gaps between inspections.}
+  \resumeItem{}{Reduced reliance on costly specialized inspections by predicting asset condition at $R^{2} \approx 0.98$ with deep learning models on sensor data.}
 
 \resumeItemListEnd
 \resumeSkills{Python + libraries (scikit-learn, PyTorch) $\cdot$ SQL, PostgreSQL $\cdot$ ETL $\cdot$ Deep Learning $\cdot$ Signal Processing}
 
-\vspace{2pt}
+\vspace{-2pt}
 
 \resumeSubheading{Tribology and Railway Dynamics Laboratory (LabTDF) -- partnership with VALE}{On-site}
-{Intern in Machine Learning and Optimization}{Jan 2019 - June 2020}
+{Intern in Machine Learning and Optimization}{Jan 2019 to June 2020}
 \resumeItemListStart
 
-  \resumeItem{Predictive modeling of the L/V ratio: }
-    {Developed a machine learning pipeline to estimate the wheel--rail contact L/V force ratio from onboard sensor time series, using multibody dynamics simulation and virtual sensors positioned at the same locations as the real sensors. The solution achieved $R^{2} \approx 0{,}97$ and contributed to making VALE's predictive maintenance project with instrumented wagons viable.}
+  \resumeItem{}{Estimated hard to measure contact forces at $R^{2} \approx 0.97$ from onboard sensors validated against simulation, making the company's predictive maintenance program viable.}
 
-  \resumeItem{Wheel--rail profile optimization for wear reduction: }
-    {Developed a wheel--rail profile optimization methodology using genetic algorithms and field data, resulting in a profile that reduced wear by 20\%, maintained fatigue performance, and improved the L/V ratio by approximately 35\%.}
+  \resumeItem{}{Lowered component wear by 20\% and improved a key safety ratio by roughly 35\% by optimizing wear profiles with genetic algorithms on field data.}
 
-  \resumeItem{Operational recommendation for maintenance threshold: }
-    {Recommended revising EFVM's maintenance threshold from 3 mm to 2 mm based on the optimization results, projecting a service life increase of at least 29\% for the current profile and 50\% for the proposed profile. The recommendation was adopted by EFVM.}
+  \resumeItem{}{Drove a maintenance threshold change adopted into operations, projected to extend asset service life by 29\% to 50\%.}
 
 \resumeItemListEnd
-\resumeSkills{Python, MATLAB $\cdot$ Machine Learning (scikit-learn, Optuna) $\cdot$ Genetic Algorithms / Optimization $\cdot$ Multibody Dynamics (Universal Mechanism, Simpack)}
+\resumeSkills{Python, MATLAB $\cdot$ Machine Learning (scikit-learn, Optuna) $\cdot$ Genetic Algorithms / Optimization $\cdot$ Multibody Simulation (Universal Mechanism, Simpack)}
 \resumeSubHeadingListEnd
 
 \vspace{-3pt}
@@ -174,6 +166,7 @@
       \resumeItemListStart
         \resumeItem{Thesis: }{Measuring railway track irregularities from instrumented railway vehicle data using machine learning techniques.}
       \resumeItemListEnd
+    \vspace{-4pt}
     \resumeSubheading
       {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
       {B.Sc. in Mechanical Engineering}{May 2020}
@@ -186,34 +179,33 @@
 
 %-----------LANGUAGES-----------------
 \section{Languages}
-  \resumeSubHeadingListStart
-    \item \textbf{Portuguese}, Native
-    \item \textbf{English}, Fluent
-    \item \textbf{Italian}, Basic
-  \resumeSubHeadingListEnd
+\vspace{2pt}
+{\small Portuguese (Native), English (Fluent), Italian (Basic)}
 
-\vspace{-5pt}
+\vspace{1pt}
 
 %-----------PUBLICATIONS-----------------
 \section{Publications \& Conferences}
-\vspace{4pt}
+\vspace{2pt}
 
-{\scshape Publications}
+{\scshape Selected Publications}
 \vspace{3pt}
 
 \resumePub{2024}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}{Engineering Applications of Artificial Intelligence}
 \resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
 \resumePub{2022}{Nonintrusive Operator Inference for Chaotic Systems}{IEEE Transactions on Artificial Intelligence}
+\resumePub{2022}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}{In Proceedings of the Fifth International Conference on Railway Technology}
 \resumePub{2021}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}{Mechanical Systems and Signal Processing}
 \resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
 
-\vspace{6pt}
+\vspace{-5pt}
 {\scshape Conference Presentations}
 \vspace{3pt}
 
+\resumeConf{2026}{International Conference on Railway Technology (Railways 2026)}{Aug. 23--26 (accepted)}{Budapest, Hungary}
 \resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{Nov. 17--21}{Colorado Springs, USA}
 \resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{Aug. 27--31}{Rio de Janeiro, Brazil}
-\resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
+%\resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
 
 \vspace{-5pt}
 
