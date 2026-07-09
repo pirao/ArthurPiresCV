@@ -96,10 +96,17 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Arthur Cancellieri Pires}} & E-mail: \href{mailto:arthur-pires@live.com}{arthur-pires@live.com}\\
-  \textit{Data Scientist \textbar{} PhD Candidate} & \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}\\
-  \href{https://github.com/pirao}{GitHub: @Pirao} & \href{https://github.com/pirao/AnomalyDetection2026}{Public project: Industrial Sensor Anomaly Detection API}\\
+  \textit{Lead Data Scientist \textbar{} Python, PyTorch, Deep Learning \textbar{} Anomaly Detection} & \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}\\
+  \href{https://github.com/pirao}{GitHub: @Pirao} & Campinas, Brazil\\
 \end{tabular*}
 
+
+%----------Professional Summary-----------------
+\section{Professional Summary}
+\vspace{1pt}
+{\small Lead Data Scientist with 7+ years building predictive-maintenance ML systems for industrial applications. Expert in Python, PyTorch, and deep learning for time series and anomaly detection, delivering real-time failure predictions at 91\% precision and cutting unplanned downtime and maintenance costs. Skilled in scalable ML pipelines, model deployment, and API development (FastAPI, Docker). PhD candidate who leads a 12-person team and ships production ML end to end.}
+
+\vspace{-4pt}
 
 %----------Work Experience-----------------
 
@@ -109,14 +116,14 @@
   {Lead Data Scientist}{January 2022 to Present}
   \resumeItemListStart
 
-    \resumeItem{}{Led a team of 12 delivering a predictive maintenance program for VALE, one of the world's largest mining and logistics companies, converting stakeholder needs into shipped ML systems.}
+    \resumeItem{}{Led a 12-person team building end-to-end predictive maintenance ML systems for VALE in Python and PyTorch, taking models from stakeholder requirements to scalable production deployment.}
 
     \resumeItem{}{Cut equipment failure detection latency from 3 months to real time at 91\% precision using deep learning models and automated data quality checks on multivariate sensor streams.}
 
     \resumeItem{}{Flagged critical defects weeks before scheduled maintenance, including cases absent from the maintenance database, with unsupervised Transformer autoencoders on time series data.}
 
   \resumeItemListEnd
-  \resumeSkills{Python | PyTorch | PyTorch Lightning | scikit-learn | Deep Learning | Transformers | Autoencoders | Anomaly Detection | Time Series | Deployment | FastAPI | Docker}
+  \resumeSkills{Python | PyTorch | PyTorch Lightning | scikit-learn | Deep Learning | Transformers | Autoencoders | Anomaly Detection | Time Series | Optuna | Deployment | FastAPI | Docker}
 
 \vspace{-2pt}
 
@@ -124,12 +131,12 @@
 {Research Data Scientist}{June 2020 to January 2022}
 \resumeItemListStart
 
-  \resumeItem{}{Built a daily ETL pipeline processing 20,000-40,000 sensor records per asset per day, integrating multiple external sources into one analytical dataset that powered all downstream models.}
+  \resumeItem{}{Built a Python ETL pipeline that merged multiple raw data sources through joins, feature extraction, and correction steps into a single processed analytical dataset (20,000-40,000 sensor records per asset per day) powering all downstream models.}
   
   \resumeItem{}{Reduced reliance on costly specialized inspections by predicting asset condition at an R2 of about 0.98 with deep learning models on sensor data.}
 
 \resumeItemListEnd
-\resumeSkills{Python | scikit-learn | PyTorch | SQL | PostgreSQL | ETL | Deep Learning | Signal Processing}
+\resumeSkills{Python | scikit-learn | PyTorch | PostgreSQL | ETL | Deep Learning | Signal Processing | Optuna}
 
 \vspace{-2pt}
 
@@ -147,9 +154,15 @@
 \resumeSkills{Python | MATLAB | Machine Learning | scikit-learn | Optuna | Genetic Algorithms | Optimization | Multibody Simulation}
 \resumeSubHeadingListEnd
 
-\vspace{-3pt}
-
 \vspace{-5pt}
+
+%-----------KEY PROJECTS-----------------
+\section{Key Projects}
+\resumeSubHeadingListStart
+  \resumeSubItem{Industrial Sensor Anomaly Detection API}{ -- Production-style FastAPI service that flags machine faults from vibration sensor streams using per-group residual scoring with stateful multi-window alerting and cooldown; serves models from an MLflow registry with Prometheus metrics, Docker Compose, and GitHub Actions CI. Cut false positives to zero across 29 benchmark scenarios (F1 0.95, recall 0.91), up from a 0.28 F1 baseline. \href{https://github.com/pirao/AnomalyDetection2026}{github.com/pirao/AnomalyDetection2026}}
+\resumeSubHeadingListEnd
+
+\vspace{-7pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -168,7 +181,7 @@
       \resumeItemListEnd
     \vspace{-4pt}
     \resumeSubheading
-      {Federal University of Espírito Santo (UFES)}{Vitória, Brazil}
+      {Federal University of Espirito Santo (UFES)}{Vitoria, Brazil}
       {B.Sc. in Mechanical Engineering}{May 2020}
       \resumeItemListStart
         \resumeItem{Thesis: }{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning.}
@@ -179,24 +192,25 @@
 
 %-----------LANGUAGES-----------------
 \section{Languages}
-\vspace{2pt}
-{\small Portuguese (Native), English (Fluent), Italian (Basic)}
-
 \vspace{1pt}
+{\small Portuguese (Native), English (C1 - Fluent), Italian (A2 - Basic)}
+
+\vspace{-3pt}
 
 %-----------PUBLICATIONS-----------------
 \section{Publications \& Conferences}
-\vspace{2pt}
+\vspace{1pt}
 
 {\scshape Selected Publications}
-\vspace{3pt}
+\vspace{2pt}
 
 \resumePub{2024}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}{Engineering Applications of Artificial Intelligence}
-\resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
 \resumePub{2022}{Nonintrusive Operator Inference for Chaotic Systems}{IEEE Transactions on Artificial Intelligence}
-\resumePub{2022}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}{In Proceedings of the Fifth International Conference on Railway Technology}
 \resumePub{2021}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}{Mechanical Systems and Signal Processing}
-\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
+% Non-ML (mechanical engineering) publications hidden for DS/ML targeting -- uncomment to restore:
+%\resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
+%\resumePub{2022}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}{In Proceedings of the Fifth International Conference on Railway Technology}
+%\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
 
 \vspace{-5pt}
 {\scshape Conference Presentations}
@@ -205,9 +219,16 @@
 \resumeConf{2026}{International Conference on Railway Technology (Railways 2026)}{Aug. 23--26 (accepted)}{Budapest, Hungary}
 \resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{Nov. 17--21}{Colorado Springs, USA}
 \resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{Aug. 27--31}{Rio de Janeiro, Brazil}
-%\resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
+\resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
 
 \vspace{-5pt}
+
+%-----------CERTIFICATIONS-----------------
+% Scaffold ready to fill in. Note: current certifications are Jan 2024 or older.
+% Uncomment the section and add \resumePub{<year>}{<certification name>}{<issuer>} entries.
+%\section{Certifications}
+%\vspace{2pt}
+%\resumePub{20XX}{Certification Name}{Issuer}
 
 
 \end{document}
