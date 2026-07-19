@@ -19,6 +19,7 @@
 \usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{ragged2e}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -41,30 +42,30 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\bfseries\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{#2 \vspace{-2pt}}
+  \item\small\justifying{
+    \textbf{#1}{#2}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \item
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textsc{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}
 }
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
 % Linha de competências por experiência (sem marcador, pequena, rótulo em negrito)
-\newcommand{\resumeSkills}[1]{\item[]\small{\textbf{Competências:}~#1}\vspace{-4pt}}
+\newcommand{\resumeSkills}[1]{\item[]\small{\textbf{Competências:}~#1}}
 
 % Publicação: coluna de ano + título em negrito + veículo (estilo da referência)
 \newcommand{\resumePub}[3]{%
@@ -82,10 +83,10 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, topsep=0pt, itemsep=6pt, parsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
@@ -94,28 +95,31 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Arthur Cancellieri Pires}} & E-mail: \href{mailto:arthur.cancellieri.pires@gmail.com}{arthur.cancellieri.pires@gmail.com}\\
-  \textit{Líder em Ciência de Dados \textbar{} Python, PyTorch \textbar{} Detecção de Anomalias} & \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}\\
-  \href{https://github.com/pirao}{GitHub: @Pirao} & Vitória, Brasil\\
-\end{tabular*}
+\textbf{{\LARGE Arthur Cancellieri Pires}} \\ \vspace{2pt}
+\textit{Líder em Ciência de Dados \textbar{} Python, PyTorch \textbar{} Detecção de Anomalias} \\ \vspace{3pt}
+{\small \href{mailto:arthur.cancellieri.pires@gmail.com}{arthur.cancellieri.pires@gmail.com}
+ \textbar{} \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}
+ \textbar{} \href{https://github.com/pirao}{GitHub: @Pirao}
+ \textbar{} Vitória, Brasil}
+
+\vspace{-8pt}
 
 %----------Resumo Profissional-----------------
 \section{Resumo Profissional}
 \vspace{1pt}
-{\small Líder em Ciência de Dados com mais de 7 anos transformando dados de sensores industriais em ML de produção para manutenção preditiva. Especialista em Python, PyTorch e deep learning para séries temporais e detecção de anomalias, entregando previsões de falha em tempo real com 91\% de precisão que reduziram paradas não planejadas e custos de manutenção. Liderou uma equipe de 12 pessoas e levou ML à produção de ponta a ponta: pipelines escaláveis, deploy de modelos e APIs (FastAPI, Docker). Doutorando com mestrado em engenharia mecânica, unindo rigor de pesquisa à produção real.}
+{\small\justifying Líder em Ciência de Dados com mais de 7 anos transformando dados de sensores industriais em ML de produção para manutenção preditiva. Especialista em Python, PyTorch e deep learning para séries temporais e detecção de anomalias, entregando previsões de falha em tempo real com 91\% de precisão que reduziram paradas não planejadas e custos de manutenção. Liderou uma equipe de 12 pessoas e levou ML à produção de ponta a ponta: pipelines escaláveis, deploy de modelos e APIs (FastAPI, Docker). Doutorando com mestrado em engenharia mecânica, unindo rigor de pesquisa à produção real.\par}
 
-\vspace{-4pt}
+\vspace{-6pt}
 
 %----------Work Experience-----------------
 
 \section{Experiência Profissional}
 \resumeSubHeadingListStart
   \resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-  {Líder em Ciência de Dados}{Agosto 2024 até o presente}
+  {Líder em Ciência de Dados}{Ago 2024 até o presente}
   \resumeItemListStart
 
-    \resumeItem{}{Liderou uma equipe de 12 pessoas entre cientistas de dados, pesquisadores e engenheiros, construindo sistemas de ML de manutenção preditiva de ponta a ponta para a VALE, dos requisitos das partes interessadas ao deploy escalável em produção.}
+    \resumeItem{}{Liderou uma equipe multidisciplinar de 12 pessoas, construindo sistemas de ML de manutenção preditiva de ponta a ponta para a VALE, dos requisitos das partes interessadas ao deploy escalável em produção.}
 
     \resumeItem{}{Reduziu a latência de detecção de falhas de 3 meses para tempo real com 91\% de precisão, usando deep learning sobre séries temporais multivariadas de sensores.}
 
@@ -124,55 +128,55 @@
     %\resumeItem{}{Traduziu problemas de engenharia e manutenção em sistemas de ML em produção que informaram decisões operacionais do dia a dia.}
 
   \resumeItemListEnd
-  \resumeSkills{Ciência de Dados | Python | PyTorch | PyTorch Lightning | scikit-learn | Deep Learning | Transformers | Autoencoders | Detecção de Anomalias | Optuna | Deploy | FastAPI | Docker}
+  \resumeSkills{Python | PyTorch | PyTorch Lightning | scikit-learn | Optuna | FastAPI | Docker | Ciência de Dados | Deep Learning | Transformers | Autoencoders | Detecção de Anomalias | Deploy}
 
-\vspace{-2pt}
+\vspace{-1pt}
 
 \resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-{Cientista de Dados Sênior}{Janeiro 2022 a Agosto 2024}
+{Cientista de Dados Sênior}{Jan 2022 a Ago 2024}
 \resumeItemListStart
 
-  \resumeItem{}{Projetou um framework automatizado de qualidade de dados que pontuava a confiabilidade de cada coleta e filtrava dados de sensores não confiáveis, substituindo a triagem manual feita viagem a viagem.}
+  \resumeItem{}{Projetou um framework automatizado de qualidade de dados em Python que pontuava a confiabilidade de cada coleta e filtrava dados de sensores não confiáveis, substituindo a triagem manual feita viagem a viagem.}
 
-  \resumeItem{}{Desenvolveu um autoencoder de deep learning não supervisionado que detectou anomalias em sensores não identificadas por verificações baseadas em regras, com cerca de 3\% de falsos positivos, preservando a qualidade dos dados para a modelagem posterior.}
+  \resumeItem{}{Desenvolveu um autoencoder não supervisionado que detectou anomalias em sensores não identificadas por verificações baseadas em regras, com cerca de 3\% de falsos positivos, preservando a qualidade dos dados para modelagem posterior.}
 
-  \resumeItem{}{Estabeleceu uma metodologia sistemática para caracterizar o comportamento normal dos sensores, aprimorando o treinamento e a avaliação dos modelos de detecção de defeitos subsequentes.}
+  \resumeItem{}{Estabeleceu uma metodologia sistemática em Python para caracterizar o comportamento normal dos sensores, aprimorando o treinamento e a avaliação dos modelos de detecção de defeitos subsequentes.}
 
 \resumeItemListEnd
-\resumeSkills{Ciência de Dados | Python | SQL | scikit-learn | PyTorch | Deep Learning | Autoencoders | Detecção de Anomalias | Aprendizado Não Supervisionado | ETL | Qualidade de Dados | Engenharia de Features | Processamento de Sinais | PostgreSQL | Optuna}
+\resumeSkills{Python | PyTorch | scikit-learn | SQL | Optuna | Ciência de Dados | Deep Learning | Autoencoders | Detecção de Anomalias | Aprendizado Não Supervisionado | Engenharia de Features | Processamento de Sinais | ETL | Qualidade de Dados}
 
-\vspace{-2pt}
+\vspace{-1pt}
 
 \resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-{Pesquisador em Ciência de Dados}{Junho 2020 a Janeiro 2022}
+{Pesquisador em Ciência de Dados}{Jun 2020 a Jan 2022}
 \resumeItemListStart
 
-  \resumeItem{}{Desenvolveu um pipeline de ETL em Python que processou entre 20 e 40 mil registros de sensores por ativo diariamente, integrando múltiplas fontes de dados em uma base analítica unificada que alimentou todos os modelos de Machine Learning subsequentes.}
+  \resumeItem{}{Desenvolveu um pipeline de ETL em Python que processou 20--40 mil registros de sensores por ativo/dia, integrando múltiplas fontes de dados em uma base analítica unificada que alimentou todos os modelos de ML subsequentes.}
 
   \resumeItem{}{Construiu modelos de deep learning que previram a condição do ativo com um R2 de aproximadamente 0,98, reduzindo a dependência de inspeções especializadas custosas.}
 
-  \resumeItem{}{Criou a base de dados e modelagem que sustentou iniciativas subsequentes de manutenção preditiva e detecção de defeitos de via na Vale.}
+  \resumeItem{}{Criou a base de dados e modelagem em Python que sustentou iniciativas subsequentes de manutenção preditiva e detecção de defeitos de via na VALE.}
 
 \resumeItemListEnd
-\resumeSkills{Ciência de Dados | Python | scikit-learn | PyTorch | PostgreSQL | ETL | Deep Learning | Engenharia de Features | Processamento de Sinais | Optuna}
+\resumeSkills{Python | PyTorch | scikit-learn | SQL | Optuna | Ciência de Dados | Deep Learning | Engenharia de Features | Processamento de Sinais | ETL}
 
-\vspace{-2pt}
+\vspace{-1pt}
 
 \resumeSubheading{Laboratório de Tribologia e Dinâmica Ferroviária (LabTDF) -- parceria VALE}{Presencial}
-{Estagiário em Machine Learning}{Jan 2019 a Junho 2020}
+{Estagiário em Machine Learning}{Jan 2019 a Jun 2020}
 \resumeItemListStart
 
-  \resumeItem{}{Estimou forças de contato difíceis de medir a partir de sensores embarcados usando um pipeline de ML validado por simulação, alcançando um R2 de cerca de 0,97, cujos resultados ajudaram a motivar a decisão da VALE de lançar um projeto de P\&D dedicado à manutenção preditiva de via usando vagões instrumentados.}
+  \resumeItem{}{Estimou forças de contato difíceis de medir via sensores embarcados com um pipeline de ML validado por simulação, alcançando R2 de cerca de 0,97, cujos resultados ajudaram a motivar a decisão da VALE de lançar um projeto de P\&D em manutenção preditiva de via com vagões instrumentados.}
 
-  \resumeItem{}{Otimizou perfis de desgaste roda-trilho com algoritmos genéticos, reduzindo o desgaste em 20\% e melhorando uma relação de segurança chave em cerca de 35\%, sem comprometer o desempenho à fadiga.}
+  \resumeItem{}{Otimizou perfis de desgaste roda--trilho com algoritmos genéticos, reduzindo o desgaste em 20\% e melhorando uma relação de segurança chave em cerca de 35\%, sem comprometer o desempenho à fadiga.}
 
-  \resumeItem{}{Comprovou a necessidade de uma mudança no limite de manutenção por meio de análise de desgaste/fadiga, conduzindo à adoção na operação e estendendo a vida útil do ativo em 29\%-50\% (29\% apenas com a mudança de limite, chegando a 50\% quando combinada com o perfil de roda otimizado).}
+  \resumeItem{}{Comprovou a necessidade de mudança no limite de manutenção via análise de desgaste/fadiga, conduzindo à adoção na operação e estendendo a vida útil do ativo em 29\%--50\% (29\% pela mudança de limite, até 50\% combinada ao perfil de roda otimizado).}
 
 \resumeItemListEnd
-\resumeSkills{Python | MATLAB | Machine Learning | scikit-learn | Optuna | Algoritmos Genéticos | Otimização | Simulação Multicorpos}
+\resumeSkills{Python | scikit-learn | Optuna | MATLAB | Universal Mechanism | Machine Learning | Otimização | Algoritmos Genéticos | Simulação Multicorpos}
 \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\vspace{-2pt}
 
 %-----------KEY PROJECTS-----------------
 \section{Projetos Principais}
@@ -185,14 +189,14 @@
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\vspace{-7pt}
+\vspace{-3pt}
 
 %-----------EDUCATION-----------------
 \section{Formação Acadêmica}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
-      {Doutorado em Engenharia Mecânica}{Previsão: Agosto 2026}
+      {Doutorado em Engenharia Mecânica}{Previsão: Ago 2026}
       \resumeItemListStart
         \resumeItem{Tese: }{Uma metodologia para detecção de defeitos de via a partir de dados de veículos ferroviários instrumentados.}
       \resumeItemListEnd
@@ -210,7 +214,7 @@
       \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-\vspace{-5pt}
+\vspace{-2pt}
 
 %-----------LANGUAGES-----------------
 \section{Idiomas}
@@ -234,7 +238,7 @@
 %\resumePub{2022}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}{In Proceedings of the Fifth International Conference on Railway Technology}
 %\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
 
-\vspace{-5pt}
+\vspace{-3pt}
 {\scshape Apresentações em Conferências}
 \vspace{3pt}
 
