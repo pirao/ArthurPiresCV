@@ -20,6 +20,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{ragged2e}
+\usepackage{needspace}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -42,7 +43,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\bfseries\raggedright\large
+  \needspace{4\baselineskip}\vspace{-4pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 %-------------------------
@@ -107,7 +108,7 @@
 %----------Professional Summary-----------------
 \section{Professional Summary}
 \vspace{1pt}
-{\small\justifying Lead Data Scientist with 7+ years turning industrial sensor data into production ML for predictive maintenance. Expert in Python, PyTorch, and deep learning for time series and anomaly detection, delivering real-time failure predictions at 91\% precision that cut unplanned downtime and maintenance costs. Led a 12-person team and shipped ML end to end: scalable pipelines, model deployment, and APIs (FastAPI, Docker). Ph.D. in mechanical engineering, grounding research rigor in real-world production.\par}
+{\small\justifying Lead Data Scientist with 7+ years turning industrial sensor data into production ML for predictive maintenance. Expert in Python, PyTorch, and deep learning for time series and anomaly detection, delivering real-time failure predictions at 91\% precision that cut unplanned downtime and maintenance costs. Led a 12-person team and shipped ML end to end: scalable pipelines, model deployment, and APIs (FastAPI, Docker). Ph.D. in Mechanical Engineering, grounding research rigor in real-world production.\par}
 
 \vspace{-6pt}
 
@@ -230,20 +231,20 @@
 {\scshape Selected Publications}
 \vspace{2pt}
 
-\resumePub{2026}{\href{https://www.sciencedirect.com/science/article/pii/S3117312826000077}{A practical approach for reliable track defect data from instrumented railway vehicles}}{Heavy Rail}
-\resumePub{2024}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}{Engineering Applications of Artificial Intelligence}
-\resumePub{2022}{Nonintrusive Operator Inference for Chaotic Systems}{IEEE Transactions on Artificial Intelligence}
-\resumePub{2021}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}{Mechanical Systems and Signal Processing}
+\resumePub{2026}{\href{https://doi.org/10.1016/j.hrail.2026.100007}{A practical approach for reliable track defect data from instrumented railway vehicles}}{Heavy Rail}
+\resumePub{2024}{\href{https://doi.org/10.1016/j.engappai.2023.107191}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}}{Engineering Applications of Artificial Intelligence}
+\resumePub{2022}{\href{https://doi.org/10.1109/TAI.2022.3207449}{Nonintrusive Operator Inference for Chaotic Systems}}{IEEE Transactions on Artificial Intelligence}
+\resumePub{2021}{\href{https://doi.org/10.1016/j.ymssp.2021.107806}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}}{Mechanical Systems and Signal Processing}
 % Non-ML (mechanical engineering) publications hidden for DS/ML targeting -- uncomment to restore:
-%\resumePub{2023}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}{Wear}
-%\resumePub{2022}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}{In Proceedings of the Fifth International Conference on Railway Technology}
-%\resumePub{2021}{The effect of railway wheel wear on reprofiling and service life}{Wear}
+%\resumePub{2023}{\href{https://doi.org/10.1016/j.wear.2023.204735}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}}{Wear}
+%\resumePub{2022}{\href{https://doi.org/10.4203/ccc.1.31.14}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}}{In Proceedings of the Fifth International Conference on Railway Technology}
+%\resumePub{2021}{\href{https://doi.org/10.1016/j.wear.2021.203799}{The effect of railway wheel wear on reprofiling and service life}}{Wear}
 
 \vspace{-3pt}
 {\scshape Conference Presentations}
 \vspace{3pt}
 
-\resumeConf{2026}{International Conference on Railway Technology (Railways 2026)}{Aug. 23--26 (accepted)}{Budapest, Hungary}
+\resumeConf{2026}{International Conference on Railway Technology (Railways 2026)}{Aug. 23--26}{Budapest, Hungary}
 \resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{Nov. 17--21}{Colorado Springs, USA}
 \resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{Aug. 27--31}{Rio de Janeiro, Brazil}
 \resumeConf{2023}{Railway Engineering Symposium}{May 19--20}{Campinas, Brazil}
@@ -251,11 +252,11 @@
 \vspace{-5pt}
 
 %-----------CERTIFICATIONS-----------------
-% Scaffold ready to fill in. Note: current certifications are Jan 2024 or older.
-% Uncomment the section and add \resumePub{<year>}{<certification name>}{<issuer>} entries.
-%\section{Certifications}
-%\vspace{2pt}
-%\resumePub{20XX}{Certification Name}{Issuer}
+\section{Certifications}
+\vspace{2pt}
+
+\resumePub{2026}{\href{https://www.deeplearning.ai/courses/orchestrating-workflows-for-genai-applications}{Orchestrating Workflows for GenAI Applications}}{DeepLearning.AI (with Astronomer) -- \textit{in progress}}
+\resumePub{2026}{AI Agents and Workflow Automation with n8n}{Hashtag Treinamentos (Brazil) -- \textit{in progress}}
 
 
 \end{document}
