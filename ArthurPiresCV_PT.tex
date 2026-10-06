@@ -22,6 +22,11 @@
 \usepackage{ragged2e}
 \usepackage{needspace}
 
+% Ligaduras (fi, fl) extraídas como letras normais para ATS e copiar/colar
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -82,6 +87,20 @@
   \end{tabularx}\vspace{1pt}
 }
 
+% Company header with roles stacked underneath
+\newcommand{\resumeCompany}[2]{
+  \item
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}
+}
+\newcommand{\resumeRole}[2]{
+  \item[]\vspace{-6pt}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+      \textsc{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, topsep=0pt, itemsep=6pt, parsep=0pt]}
@@ -97,10 +116,10 @@
 
 %----------HEADING-----------------
 \textbf{{\LARGE Arthur Cancellieri Pires}} \\ \vspace{2pt}
-\textit{Líder em Ciência de Dados \textbar{} Python, PyTorch \textbar{} Detecção de Anomalias} \\ \vspace{3pt}
+\textit{Líder em Ciência de Dados \textbar{} Séries Temporais e Detecção de Anomalias \textbar{} Python, PyTorch} \\ \vspace{3pt}
 {\small \href{mailto:arthur.cancellieri.pires@gmail.com}{arthur.cancellieri.pires@gmail.com}
- \textbar{} \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{LinkedIn: Arthur Cancellieri Pires}
- \textbar{} \href{https://github.com/pirao}{GitHub: @Pirao}
+ \textbar{} \href{https://www.linkedin.com/in/arthur-cancellieri-pires-730963160}{linkedin.com/in/arthur-cancellieri-pires-730963160}
+ \textbar{} \href{https://github.com/pirao}{github.com/pirao}
  \textbar{} Vitória, Brasil}
 
 \vspace{-8pt}
@@ -108,7 +127,20 @@
 %----------Resumo Profissional-----------------
 \section{Resumo Profissional}
 \vspace{1pt}
-{\small\justifying Líder em Ciência de Dados com mais de 7 anos transformando dados de sensores industriais em ML de produção para manutenção preditiva. Especialista em Python, PyTorch e deep learning para séries temporais e detecção de anomalias, entregando previsões de falha em tempo real com 91\% de precisão que reduziram paradas não planejadas e custos de manutenção. Liderou uma equipe de 12 pessoas e levou ML à produção de ponta a ponta: pipelines escaláveis, deploy de modelos e APIs (FastAPI, Docker). Doutor em engenharia mecânica, unindo rigor de pesquisa à produção real.\par}
+{\small\justifying Líder em Ciência de Dados com mais de 7 anos transformando dados de sensores industriais em sistemas de machine learning para manutenção preditiva na indústria de mineração e ferrovias. Especialista em Python, PyTorch e deep learning para séries temporais e detecção de anomalias: reduziu a detecção de defeitos de instrumentação de um ciclo de três meses para tempo real com 91\% de precisão e identificou defeitos críticos de via semanas antes das manutenções programadas. Liderou uma equipe multidisciplinar de 12 pessoas, dos requisitos das partes interessadas até o início do deploy em produção. Doutor em Engenharia Mecânica (UNICAMP).\par}
+
+\vspace{-6pt}
+
+%----------Competências Técnicas-----------------
+\section{Competências Técnicas}
+\vspace{1pt}
+{\small
+\textbf{Linguagens:} Python, SQL, MATLAB \\
+\textbf{ML e Deep Learning:} PyTorch, PyTorch Lightning, TensorFlow, Keras, scikit-learn, XGBoost, Statsmodels, PyCaret, Optuna, MLflow \\
+\textbf{Dados e Armazenamento:} Pandas, NumPy, SciPy, PySpark, PostgreSQL, MySQL \\
+\textbf{MLOps e Cloud:} FastAPI, Docker, Docker Compose, Kubernetes, GitHub Actions, Git, AWS \\
+\textbf{Visualização:} Matplotlib, Seaborn, Plotly, Power BI \\
+\textbf{Métodos:} detecção de anomalias em séries temporais, autoencoders, Transformers, aprendizado não supervisionado, processamento de sinais, engenharia de features, ETL, qualidade de dados\par}
 
 \vspace{-6pt}
 
@@ -116,103 +148,98 @@
 
 \section{Experiência Profissional}
 \resumeSubHeadingListStart
-  \resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-  {Líder em Ciência de Dados}{Ago 2024 a Ago 2026}
+  \resumeSubheading{Laboratório Ferroviário (LAFER) -- Manutenção preditiva para a VALE}{Vitória, Brasil}
+  {Líder em Ciência de Dados}{Ago 2024 a Atual}
   \resumeItemListStart
 
-    \resumeItem{}{Liderou uma equipe multidisciplinar de 12 pessoas, construindo sistemas de ML de manutenção preditiva de ponta a ponta para a VALE, dos requisitos das partes interessadas ao deploy escalável em produção.}
+    \resumeItem{}{Liderou uma equipe multidisciplinar de 12 pessoas construindo sistemas de ML de manutenção preditiva de ponta a ponta para a equipe de manutenção de via da VALE, cobrindo 900 km de via monitorados por 2 veículos ferroviários instrumentados, dos requisitos das partes interessadas até o início do deploy em produção.}
 
-    \resumeItem{}{Reduziu a latência de detecção de falhas de 3 meses para tempo real com 91\% de precisão, usando deep learning sobre séries temporais multivariadas de sensores.}
+    \resumeItem{}{Reduziu a latência de detecção de defeitos de instrumentação de 3 meses para tempo real com 91\% de precisão, usando modelos de deep learning em PyTorch e PyTorch Lightning sobre séries temporais multivariadas de sensores, evitando que sensores defeituosos corrompessem os dados dos modelos de detecção de defeitos de via.}
 
-    \resumeItem{}{Desenvolveu autoencoders Transformer não supervisionados que identificaram defeitos críticos semanas antes das manutenções programadas, incluindo modos de falha ausentes da base de manutenção.}
+    \resumeItem{}{Desenvolveu autoencoders Transformer não supervisionados que identificaram defeitos críticos de via semanas antes das manutenções programadas, incluindo modos de falha ausentes da base de manutenção.}
 
     %\resumeItem{}{Traduziu problemas de engenharia e manutenção em sistemas de ML em produção que informaram decisões operacionais do dia a dia.}
 
   \resumeItemListEnd
-  \resumeSkills{Python | PyTorch | PyTorch Lightning | scikit-learn | Optuna | FastAPI | Docker | Ciência de Dados | Deep Learning | Transformers | Autoencoders | Detecção de Anomalias | Deploy}
 
 \vspace{-1pt}
 
-\resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-{Cientista de Dados Sênior}{Jan 2022 a Ago 2024}
+\vspace{2pt}\resumeRole{Cientista de Dados Sênior}{Jan 2022 a Ago 2024}
 \resumeItemListStart
 
-  \resumeItem{}{Projetou um framework automatizado de qualidade de dados em Python que pontuava a confiabilidade de cada coleta e filtrava dados de sensores não confiáveis, substituindo a triagem manual feita viagem a viagem.}
+  \resumeItem{}{Projetou um framework automatizado de qualidade de dados em Python e SQL que pontuava a confiabilidade de cada coleta e filtrava dados de sensores não confiáveis, substituindo a triagem manual feita viagem a viagem e mantendo a base de dados válida ao longo de sucessivas versões do pipeline.}
 
-  \resumeItem{}{Desenvolveu um autoencoder não supervisionado que detectou anomalias em sensores não identificadas por verificações baseadas em regras, com cerca de 3\% de falsos positivos, preservando a qualidade dos dados para modelagem posterior.}
+  \resumeItem{}{Desenvolveu um autoencoder não supervisionado em PyTorch, ajustado com Optuna, que detectou anomalias em sensores não identificadas por verificações baseadas em regras, com cerca de 3\% de falsos positivos, preservando a qualidade dos dados para modelagem posterior.}
 
-  \resumeItem{}{Estabeleceu uma metodologia sistemática em Python para caracterizar o comportamento normal dos sensores, aprimorando o treinamento e a avaliação dos modelos de detecção de defeitos subsequentes.}
+  \resumeItem{}{Construiu um modelo de referência do comportamento normal dos sensores que deu aos modelos de detecção de defeitos de via uma referência consistente para treinamento e avaliação.}
 
 \resumeItemListEnd
-\resumeSkills{Python | PyTorch | scikit-learn | SQL | Optuna | Ciência de Dados | Deep Learning | Autoencoders | Detecção de Anomalias | Aprendizado Não Supervisionado | Engenharia de Features | Processamento de Sinais | ETL | Qualidade de Dados}
 
 \vspace{-1pt}
 
-\resumeSubheading{Laboratório Ferroviário (Lafer) -- parceria VALE}{Presencial}
-{Pesquisador em Ciência de Dados}{Jun 2020 a Jan 2022}
+\vspace{2pt}\resumeRole{Pesquisador em Ciência de Dados}{Jun 2020 a Jan 2022}
 \resumeItemListStart
 
-  \resumeItem{}{Desenvolveu um pipeline de ETL em Python que processou 20--40 mil registros de sensores por ativo/dia, integrando múltiplas fontes de dados em uma base analítica unificada que alimentou todos os modelos de ML subsequentes.}
+  \resumeItem{}{Desenvolveu um pipeline de ETL em Python e SQL que processou 20--40 mil registros de sensores por ativo/dia, integrando múltiplas fontes de dados em uma base analítica unificada que se tornou a fundação de todos os modelos de manutenção preditiva posteriores na VALE.}
 
-  \resumeItem{}{Construiu modelos de deep learning que previram a condição do ativo com um R2 de aproximadamente 0,98, reduzindo a dependência de inspeções especializadas custosas.}
+  \resumeItem{}{Construiu modelos de deep learning em PyTorch que previram irregularidades verticais da via a partir de dados de sensores embarcados com um R2 de aproximadamente 0,98, reduzindo a dependência de inspeções custosas de geometria da via.}
 
-  \resumeItem{}{Criou a base de dados e modelagem em Python que sustentou iniciativas subsequentes de manutenção preditiva e detecção de defeitos de via na VALE.}
 
 \resumeItemListEnd
-\resumeSkills{Python | PyTorch | scikit-learn | SQL | Optuna | Ciência de Dados | Deep Learning | Engenharia de Features | Processamento de Sinais | ETL}
 
 \vspace{-1pt}
 
-\resumeSubheading{Laboratório de Tribologia e Dinâmica Ferroviária (LabTDF) -- parceria VALE}{Presencial}
+\resumeSubheading{Lab. de Tribologia e Dinâmica Ferroviária (LabTDF) -- Projetos da VALE}{Vitória, Brasil}
 {Estagiário em Machine Learning}{Jan 2019 a Jun 2020}
 \resumeItemListStart
 
-  \resumeItem{}{Estimou forças de contato difíceis de medir via sensores embarcados com um pipeline de ML validado por simulação, alcançando R2 de cerca de 0,97, cujos resultados ajudaram a motivar a decisão da VALE de lançar um projeto de P\&D em manutenção preditiva de via com vagões instrumentados.}
+  \resumeItem{}{Estimou forças de contato difíceis de medir via sensores embarcados com um pipeline de ML validado por simulação (scikit-learn, Universal Mechanism), alcançando R2 de cerca de 0,97, e os resultados ajudaram a convencer a VALE a lançar um projeto de P\&D em manutenção preditiva de via com vagões instrumentados.}
 
   \resumeItem{}{Otimizou perfis de desgaste roda--trilho com algoritmos genéticos, reduzindo o desgaste em 20\% e melhorando uma relação de segurança chave em cerca de 35\%, sem comprometer o desempenho à fadiga.}
 
-  \resumeItem{}{Comprovou a necessidade de mudança no limite de manutenção via análise de desgaste/fadiga, conduzindo à adoção na operação e estendendo a vida útil do ativo em 29\%--50\% (29\% pela mudança de limite, até 50\% combinada ao perfil de roda otimizado).}
+  \resumeItem{}{Realizou análises de desgaste e fadiga que levaram a operação a adotar um novo limite de manutenção, estendendo a vida útil do ativo em 29\% (até 50\% combinada ao perfil de roda otimizado).}
 
 \resumeItemListEnd
-\resumeSkills{Python | scikit-learn | Optuna | MATLAB | Universal Mechanism | Machine Learning | Otimização | Algoritmos Genéticos | Simulação Multicorpos}
 \resumeSubHeadingListEnd
 
 \vspace{-2pt}
 
 %-----------KEY PROJECTS-----------------
+\needspace{10\baselineskip}
 \section{Projetos Principais}
 \resumeSubHeadingListStart
   \resumeSubItem{Industrial Sensor Anomaly Detection API}{ -- \href{https://github.com/pirao/AnomalyDetection2026}{github.com/pirao/AnomalyDetection2026}}
   \resumeItemListStart
-    \resumeItem{}{Serviço FastAPI em nível de produção para detecção de falhas de máquinas em tempo real, reduzindo os falsos positivos a zero em 29 cenários de benchmark (F1 0,95, recall 0,91), ante um baseline de F1 0,28.}
-    \resumeItem{}{Pontuação de resíduos por grupo em sensores de vibração multivariados, com motor de alertas stateful em múltiplas janelas (confirmação e cooldown).}
-    \resumeItem{}{Serve modelos versionados a partir de um registro MLflow. Containerizado com Docker Compose e CI no GitHub Actions.}
+    \resumeItem{}{Construiu um serviço FastAPI em nível de produção para detecção de falhas de máquinas em tempo real, reduzindo os falsos positivos a zero em 29 cenários de benchmark (F1 0,95, recall 0,91), ante um baseline de F1 0,28.}
+    \resumeItem{}{Implementou pontuação de resíduos por grupo em sensores de vibração multivariados, com motor de alertas stateful em múltiplas janelas (confirmação e cooldown).}
+    \resumeItem{}{Disponibilizou modelos versionados a partir de um registro MLflow, containerizados com Docker Compose e testados com CI no GitHub Actions.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \vspace{-3pt}
+
+%-----------CERTIFICATIONS-----------------
+\section{Certificações}
+\vspace{2pt}
+
+\resumePub{2026}{\href{https://www.deeplearning.ai/courses/orchestrating-workflows-for-genai-applications}{Orchestrating Workflows for GenAI Applications}}{DeepLearning.AI (com Astronomer) -- \textit{em andamento}}
+\resumePub{2026}{Agentes de IA e N8N Impressionador}{Hashtag Treinamentos -- \textit{em andamento}}
+\resumePub{2024}{TensorFlow 2 for Deep Learning Specialization}{Imperial College London (Coursera)}
+\resumePub{2024}{Probabilistic Deep Learning with TensorFlow 2}{Imperial College London (Coursera)}
+\vspace{-12pt}
 
 %-----------EDUCATION-----------------
 \section{Formação Acadêmica}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
-      {Doutorado em Engenharia Mecânica}{Ago 2026}
-      \resumeItemListStart
-        \resumeItem{Tese: }{Uma metodologia para detecção de defeitos de via a partir de dados de veículos ferroviários instrumentados.}
-      \resumeItemListEnd
+      {Doutorado em Engenharia Mecânica}{Set 2026}
     \resumeSubheading
       {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
       {Mestrado em Engenharia Mecânica}{Jan 2022}
-      \resumeItemListStart
-        \resumeItem{Dissertação: }{Medição de irregularidades da via a partir de dados de veículos ferroviários instrumentados via machine learning.}
-      \resumeItemListEnd
     \resumeSubheading
       {Universidade Federal do Espírito Santo (UFES)}{Vitória, Brasil}
       {Bacharelado em Engenharia Mecânica}{Maio 2020}
-      \resumeItemListStart
-        \resumeItem{Monografia: }{Identificação indireta das forças de contato roda--trilho em veículo ferroviário heavy haul instrumentado via machine learning.}
-      \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 \vspace{-2pt}
@@ -231,32 +258,18 @@
 {\scshape Publicações Selecionadas}
 \vspace{2pt}
 
-\resumePub{2026}{\href{https://doi.org/10.1016/j.hrail.2026.100007}{A practical approach for reliable track defect data from instrumented railway vehicles}}{Heavy Rail}
-\resumePub{2024}{\href{https://doi.org/10.1016/j.engappai.2023.107191}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}}{Engineering Applications of Artificial Intelligence}
-\resumePub{2022}{\href{https://doi.org/10.1109/TAI.2022.3207449}{Nonintrusive Operator Inference for Chaotic Systems}}{IEEE Transactions on Artificial Intelligence}
-\resumePub{2021}{\href{https://doi.org/10.1016/j.ymssp.2021.107806}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}}{Mechanical Systems and Signal Processing}
+\resumePub{2026}{\href{https://doi.org/10.1016/j.hrail.2026.100007}{A practical approach for reliable track defect data from instrumented railway vehicles}}{Heavy Rail (primeiro autor)}
+\resumePub{2024}{\href{https://doi.org/10.1016/j.engappai.2023.107191}{Measuring vertical track irregularities from instrumented heavy haul railway vehicle data using machine learning}}{Engineering Applications of Artificial Intelligence (primeiro autor)}
+\resumePub{2022}{\href{https://doi.org/10.1109/TAI.2022.3207449}{Nonintrusive Operator Inference for Chaotic Systems}}{IEEE Transactions on Artificial Intelligence (coautor)}
+\resumePub{2021}{\href{https://doi.org/10.1016/j.ymssp.2021.107806}{Indirect identification of wheel--rail contact forces of an instrumented heavy haul railway vehicle using machine learning}}{Mechanical Systems and Signal Processing (primeiro autor)}
 % Publicações fora de ML (engenharia mecânica) ocultadas para foco em DS/ML -- descomente para restaurar:
 %\resumePub{2023}{\href{https://doi.org/10.1016/j.wear.2023.204735}{Influence of wheel tread wear on Rolling Contact Fatigue and on the dynamics of railway vehicles}}{Wear}
 %\resumePub{2022}{\href{https://doi.org/10.4203/ccc.1.31.14}{Generation of realistic artificial track irregularities for multibody simulation using measured geometric data: from mid-chord to space-curve}}{In Proceedings of the Fifth International Conference on Railway Technology}
 %\resumePub{2021}{\href{https://doi.org/10.1016/j.wear.2021.203799}{The effect of railway wheel wear on reprofiling and service life}}{Wear}
 
-\vspace{-3pt}
-{\scshape Apresentações em Conferências}
-\vspace{3pt}
-
-\resumeConf{2026}{International Conference on Railway Technology (Railways 2026)}{23--26 ago.}{Budapeste, Hungria}
-\resumeConf{2025}{International Heavy Haul Association (IHHA) Conference}{17--21 nov.}{Colorado Springs, EUA}
-\resumeConf{2023}{International Heavy Haul Association (IHHA) Conference}{27--31 ago.}{Rio de Janeiro, Brasil}
-\resumeConf{2023}{Railway Engineering Symposium}{19--20 maio}{Campinas, Brasil}
-
-\vspace{-5pt}
-
-%-----------CERTIFICATIONS-----------------
-\section{Certificações}
 \vspace{2pt}
+{\small \textbf{Palestrante em conferências:} International Conference on Railway Technology (Budapeste, 2026), International Heavy Haul Association (IHHA) Conference (Colorado Springs, 2025 e Rio de Janeiro, 2023).\par}
 
-\resumePub{2026}{\href{https://www.deeplearning.ai/courses/orchestrating-workflows-for-genai-applications}{Orchestrating Workflows for GenAI Applications}}{DeepLearning.AI (com Astronomer) -- \textit{em andamento}}
-\resumePub{2026}{Agentes de IA e N8N Impressionador}{Hashtag Treinamentos -- \textit{em andamento}}
-
+\vspace{-3pt}
 
 \end{document}
